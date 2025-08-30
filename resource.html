@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 资源导航" data-cn="Jeffery Hu | 资源导航" data-en="Jeffery Hu | Resource Navigation" data-jp="Jeffery Hu | リソースナビゲーション">
+    <meta property="og:description" content="分享实用学习资源与工具" data-cn="分享实用学习资源与工具" data-en="Sharing practical learning resources and tools" data-jp="実用的な学習リソースとツールを共有">
+    <meta property="og:url" content="https://resource.huyang3780.top">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 资源导航" data-en="Jeffery Hu | Resource Navigation" data-jp="Jeffery Hu | リソースナビゲーション"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- 可个性化的logo区域 -->
+				<a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+					<span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+						<i class="fa fa-book"></i>
+					</span>
+					<span id="logo-text">Resources</span>
+				</a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="#learning" class="link-underline" data-cn="学习资源" data-en="Learning Resources" data-jp="学習リソース">学习资源</a>
+				<a href="#studyabroad" class="link-underline" data-cn="留学资料" data-en="Study Abroad Materials" data-jp="留学資料">留学资料</a>
+				<a href="#tools" class="link-underline" data-cn="工具推荐" data-en="Tool Recommendations" data-jp="ツール推奨">工具推荐</a>
+				<a href="#downloads" class="link-underline" data-cn="资源下载" data-en="Resource Downloads" data-jp="リソースダウンロード">资源下载</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="#learning" class="text-lg py-2 border-b border-gray-100" data-cn="学习资源" data-en="Learning Resources" data-jp="学習リソース"></a>
+				<a href="#studyabroad" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad Materials" data-jp="留学資料"></a>
+				<a href="#tools" class="text-lg py-2 border-b border-gray-100" data-cn="工具推荐" data-en="Tool Recommendations" data-jp="ツール推奨"></a>
+				<a href="#downloads" class="text-lg py-2 border-b border-gray-100" data-cn="资源下载" data-en="Resource Downloads" data-jp="リソースダウンロード"></a>
+			</div>
+		</div>
+    </header>
+	<section class="min-h-screen pt-24 relative overflow-hidden flex items-center">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+		<div class="container mx-auto px-4 pt-12 pb-24 relative z-10">
+			<div class="max-w-3xl mx-auto text-left">
+				<h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold leading-tight mb-6" 
+					data-cn="欢迎来到<br><span class='bg-gradient-to-r from-primary to-accent text-gradient whitespace-nowrap'>资源导航</span>页面"
+					data-en="Welcome to<br><span class='bg-gradient-to-r from-primary to-accent text-gradient whitespace-nowrap'>Resource</span> <br>Navigation Page"
+					data-jp="ようこそ<br><span class='bg-gradient-to-r from-primary to-accent text-gradient whitespace-nowrap'>リソース</span>の<br>ナビゲーションページ">
+				</h1>
+				<p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-600 mb-8 max-w-2xl" 
+					data-cn="这里整理了我在学习和生活中积累的实用资源，希望能为你的成长提供帮助"
+					data-en="Here are the practical resources I have accumulated in my study and life, hoping to help your growth"
+					data-jp="ここには、私が学習と生活で蓄積した実用的なリソースを整理しました。皆さんの成長のお手伝いができれば幸いです">
+				</p>
+				<div class="flex flex-wrap gap-4">
+					<a href="#learning" class="px-8 py-3 bg-primary text-white rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 transition-all"
+						data-cn="开始探索 <i class='fa fa-compass ml-2'></i>"
+						data-en="Start Exploring <i class='fa fa-compass ml-2'></i>"
+						data-jp="探索を始める <i class='fa fa-compass ml-2'></i>">
+					</a>
+					<a href="#downloads" class="px-8 py-3 bg-white text-dark rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-100"
+						data-cn="下载资源 <i class='fa fa-download ml-2'></i>"
+						data-en="Download Resources <i class='fa fa-download ml-2'></i>"
+						data-jp="リソースをダウンロード <i class='fa fa-download ml-2'></i>">
+					</a>
+				</div>
+			</div>
+			
+			<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce lg:bottom-10 sm:bottom-8">
+				<a href="#learning" class="text-gray-400 hover:text-primary transition-colors">
+					<i class="fa fa-chevron-down text-2xl"></i>
+				</a>
+			</div>
+		</div>
+		
+		<div class="section-divider absolute bottom-0 left-0"></div>
+	</section>
+    <section id="learning" class="py-20 relative overflow-hidden section-fade">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="学习资源" data-en="Learning Resources" data-jp="学習リソース">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="计算机与语言学习资源" data-en="Computer and Language Learning Resources" data-jp="コンピュータと言語学習リソース">
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 计算机专业资源卡片 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <i class="fa fa-laptop text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3"
+                            data-cn="计算机专业核心资源" data-en="Core Computer Science Resources" data-jp="コンピュータサイエンスの核心リソース">
+                        </h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span data-cn="操作系统、算法与数据结构学习资料" data-en="Operating Systems, Algorithms and Data Structures materials" data-jp="オペレーティングシステム、アルゴリズムとデータ構造の学習資料"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span data-cn="编程语言教程（Python/Java/C++）" data-en="Programming Language Tutorials (Python/Java/C++)" data-jp="プログラミング言語チュートリアル（Python/Java/C++）"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                                <span data-cn="计算机网络与数据库系统学习指南" data-en="Computer Networks and Database Systems study guides" data-jp="コンピュータネットワークとデータベースシステムの学習ガイド"></span>
+                            </li>
+                        </ul>
+                        <a href="main-resource.html" class="inline-flex items-center text-primary font-medium mt-4 group"
+                            data-cn="查看详情 <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>"
+                            data-en="View Details <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>"
+                            data-jp="詳細を見る <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 语言学习资源卡片 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-6">
+                            <i class="fa fa-language text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3"
+                            data-cn="语言学习资源" data-en="Language Learning Resources" data-jp="言語学習リソース">
+                        </h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-secondary mt-1 mr-2"></i>
+                                <span data-cn="日语能力考（JLPT）备考资料" data-en="JLPT preparation materials" data-jp="日本語能力試験（JLPT）の準備資料"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-secondary mt-1 mr-2"></i>
+                                <span data-cn="英语托福/雅思备考资源" data-en="TOEFL/IELTS preparation resources" data-jp="英語TOEFL/IELTSの準備リソース"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-secondary mt-1 mr-2"></i>
+                                <span data-cn="多语言学习方法论与工具" data-en="Multilingual learning methodologies and tools" data-jp="多言語学習の方法論とツール"></span>
+                            </li>
+                        </ul>
+                        <a href="study-resource.html" class="inline-flex items-center text-secondary font-medium mt-4 group"
+                            data-cn="查看详情 <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>"
+                            data-en="View Details <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>"
+                            data-jp="詳細を見る <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 在线学习平台卡片 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center text-accent mb-6">
+                            <i class="fa fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3"
+                            data-cn="在线学习平台" data-en="Online Learning Platforms" data-jp="オンライン学習プラットフォーム">
+                        </h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                <span data-cn="Coursera、edX等慕课平台推荐" data-en="Recommendation of MOOC platforms like Coursera, edX" data-jp="Coursera、edXなどのMOOCプラットフォームの推薦"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                <span data-cn="B站计算机相关优质课程整理" data-en="Organized high-quality computer courses on Bilibili" data-jp="B站のコンピュータ関連の優質コースの整理"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                <span data-cn="技术博客与社区资源汇总" data-en="Summary of technical blogs and community resources" data-jp="技術ブログとコミュニティリソースの集約"></span>
+                            </li>
+                        </ul>
+                        <a href="study-online.html" class="inline-flex items-center text-accent font-medium mt-4 group"
+                            data-cn="查看详情 <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>"
+                            data-en="View Details <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>"
+                            data-jp="詳細を見る <i class='fa fa-arrow-right ml-2 group-hover:ml-3 transition-all'></i>">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-divider absolute bottom-0 left-0"></div>
+    </section>
+    
+    <section id="studyabroad" class="py-20 relative overflow-hidden section-fade">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="留学资料" data-en="Study Abroad Materials" data-jp="留学資料">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="日本与欧洲留学资源" data-en="Japan and Europe Study Abroad Resources" data-jp="日本とヨーロッパの留学リソース">
+                </h2>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl max-w-5xl mx-auto relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 日本留学资料 -->
+                    <div class="bg-softBlue/50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <h3 class="text-xl font-bold"
+                                data-cn="日本留学资料" data-en="Japan Study Abroad Materials" data-jp="日本留学資料">
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-primary mt-1 mr-2"></i>
+                                <span data-cn="日本各大学情报理工学院介绍" data-en="Introduction to Information Technology Faculties of Japanese Universities" data-jp="日本の各大学の情報理工学部の紹介"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-primary mt-1 mr-2"></i>
+                                <span data-cn="日本研究生申请流程与攻略" data-en="Japan Graduate School Application Process and Guide" data-jp="日本の大学院申請プロセスと攻略"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-primary mt-1 mr-2"></i>
+                                <span data-cn="研究计划书撰写指南与模板" data-en="Research Plan Writing Guide and Template" data-jp="研究計画書の作成ガイドとテンプレート"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-primary mt-1 mr-2"></i>
+                                <span data-cn="日本留学奖学金信息汇总" data-en="Summary of Japan Study Abroad Scholarship Information" data-jp="日本留学奨学金情報の集約"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 欧洲留学资料 -->
+                    <div class="bg-softGreen/50 p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mr-3">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <h3 class="text-xl font-bold"
+                                data-cn="欧洲留学资料" data-en="Europe Study Abroad Materials" data-jp="ヨーロッパ留学資料">
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-secondary mt-1 mr-2"></i>
+                                <span data-cn="欧洲顶尖理工大学计算机专业介绍" data-en="Introduction to Computer Science Programs at Top European Technical Universities" data-jp="ヨーロッパのトップ理工大学のコンピュータプログラムの紹介"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-secondary mt-1 mr-2"></i>
+                                <span data-cn="欧洲研究生申请要求与准备" data-en="European Graduate School Application Requirements and Preparation" data-jp="ヨーロッパの大学院申請要件と準備"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-secondary mt-1 mr-2"></i>
+                                <span data-cn="英语授课项目与奖学金信息" data-en="English Taught Programs and Scholarship Information" data-jp="英語での授業プログラムと奨学金情報"></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-file-text-o text-secondary mt-1 mr-2"></i>
+                                <span data-cn="留学欧洲生活指南与注意事项" data-en="Living Guide and Notes for Studying in Europe" data-jp="ヨーロッパ留学の生活ガイドと注意事項"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <a href="studyaboard.html" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 transition-all"
+                        data-cn="查看全部留学资料 <i class='fa fa-external-link ml-2'></i>"
+                        data-en="View All Study Abroad Materials <i class='fa fa-external-link ml-2'></i>"
+                        data-jp="すべての留学資料を見る <i class='fa fa-external-link ml-2'></i>">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-divider absolute bottom-0 left-0"></div>
+    </section>
+    
+    <section id="tools" class="py-20 relative overflow-hidden section-fade">
+		<div class="container mx-auto px-4">
+			<div class="text-center max-w-3xl mx-auto mb-12">
+				<span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+					data-cn="工具推荐" data-en="Tool Recommendations" data-jp="ツール推奨">
+				</span>
+				<h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+					data-cn="高效学习与开发工具" data-en="Efficient Learning and Development Tools" data-jp="効率的な学習と開発ツール">
+				</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+				<!-- 开发工具卡片 - 添加了链接 -->
+				<a href="program-tools.html" class="block">
+					<div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover h-full">
+						<div class="p-6">
+							<div class="flex items-center mb-4">
+								<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+									<i class="fa fa-code"></i>
+								</div>
+								<h3 class="text-xl font-bold"
+									data-cn="开发与编程工具" data-en="Development and Programming Tools" data-jp="開発とプログラミングツール">
+								</h3>
+							</div>
+							<ul class="space-y-2 text-gray-600">
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+									<span data-cn="VS Code 高效配置与插件推荐" data-en="VS Code efficient configuration and plugin recommendations" data-jp="VS Code の効率的な設定とプラグインの推薦"></span>
+								</li>
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+									<span data-cn="Git 版本控制使用技巧" data-en="Git version control usage tips" data-jp="Git のバージョン管理の使い方"></span>
+								</li>
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+									<span data-cn="数据库管理与可视化工具" data-en="Database management and visualization tools" data-jp="データベース管理と視覚化ツール"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</a>
+				
+				<!-- 学术工具卡片 - 添加了链接 -->
+				<a href="research-tools.html" class="block">
+					<div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover h-full">
+						<div class="p-6">
+							<div class="flex items-center mb-4">
+								<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mr-4">
+									<i class="fa fa-book"></i>
+								</div>
+								<h3 class="text-xl font-bold"
+									data-cn="学术研究工具" data-en="Academic Research Tools" data-jp="学術研究ツール">
+								</h3>
+							</div>
+							<ul class="space-y-2 text-gray-600">
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+									<span data-cn="文献管理工具（Zotero/Mendeley）" data-en="Literature management tools (Zotero/Mendeley)" data-jp="文献管理ツール（Zotero/Mendeley）"></span>
+								</li>
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+									<span data-cn="论文写作与排版工具（LaTeX）" data-en="Paper writing and typesetting tools (LaTeX)" data-jp="論文作成と組版ツール（LaTeX）"></span>
+								</li>
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+									<span data-cn="学术资源检索与下载工具" data-en="Academic resource retrieval and download tools" data-jp="学術リソース検索とダウンロードツール"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</a>
+				
+				<!-- 效率工具卡片 - 添加了链接 -->
+				<a href="time.html" class="block">
+					<div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover h-full">
+						<div class="p-6">
+							<div class="flex items-center mb-4">
+								<div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-4">
+									<i class="fa fa-clock-o"></i>
+								</div>
+								<h3 class="text-xl font-bold"
+									data-cn="效率与时间管理" data-en="Productivity and Time Management" data-jp="生産性と時間管理">
+								</h3>
+							</div>
+							<ul class="space-y-2 text-gray-600">
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+									<span data-cn="任务管理与日程安排工具" data-en="Task management and scheduling tools" data-jp="タスク管理とスケジューリングツール"></span>
+								</li>
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+									<span data-cn="笔记与知识管理系统" data-en="Note-taking and knowledge management systems" data-jp="メモと知識管理システム"></span>
+								</li>
+								<li class="flex items-start">
+									<i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+									<span data-cn="专注与效率提升方法" data-en="Focus and productivity improvement methods" data-jp="集中力と生産性向上方法"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="section-divider absolute bottom-0 left-0"></div>
+	</section>
+
+    
+    <section id="downloads" class="py-20 relative overflow-hidden section-fade">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="资源下载" data-en="Resource Downloads" data-jp="リソースダウンロード">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="可下载的实用资料" data-en="Downloadable Practical Materials" data-jp="ダウンロード可能な実用資料">
+                </h2>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl max-w-5xl mx-auto relative z-10">
+                <div class="overflow-x-auto">
+                    <table class="w-full min-w-max">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="py-4 px-6 text-left text-sm font-medium text-gray-500 uppercase tracking-wider"
+                                    data-cn="资源名称" data-en="Resource Name" data-jp="リソース名">
+                                </th>
+                                <th class="py-4 px-6 text-left text-sm font-medium text-gray-500 uppercase tracking-wider"
+                                    data-cn="资源类型" data-en="Resource Type" data-jp="リソースタイプ">
+                                </th>
+                                <th class="py-4 px-6 text-left text-sm font-medium text-gray-500 uppercase tracking-wider"
+                                    data-cn="更新时间" data-en="Update Time" data-jp="更新時間">
+                                </th>
+                                <th class="py-4 px-6 text-left text-sm font-medium text-gray-500 uppercase tracking-wider"
+                                    data-cn="下载" data-en="Download" data-jp="ダウンロード">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-medium text-gray-900"
+                                        data-cn="计算机科学核心课程学习笔记" data-en="Computer Science Core Course Study Notes" data-jp="コンピュータサイエンスの核心コース学習ノート">
+                                    </div>
+                                    <div class="text-sm text-gray-500"
+                                        data-cn="包含操作系统、算法、数据结构等核心课程笔记" data-en="Including core course notes on operating systems, algorithms, data structures, etc." data-jp="オペレーティングシステム、アルゴリズム、データ構造などの核心コースノートが含まれます">
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="PDF" data-en="PDF" data-jp="PDF">
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="2025年8月15日" data-en="August 15, 2025" data-jp="2025年8月15日">
+                                </td>
+                                <td class="py-4 px-6 text-sm">
+                                    <a href="https://developer-oss.lanrar.com/file/?AGYGOAw9UmMDCgQ8AzZTP1VqUmpR5gOvUfcA4Qb0UccE4ladAOdT4QTyAe9T4gK8W4ID7lGhBblXt1X7VIMH4gC5BvEMtlKqA8EEugP5U+JVIVInUWoDZ1FwAGAGM1E8BGFWXgA0U2MEbwFlUzICMls5AzFROgUzV2VVY1QuB2AAcwZsDGJSMwNhBGIDZFNrVSlSJ1F+AzxRZAA2BmhRZQQrVjEAZVMoBGEBZ1MoAjpbNgM1UTYFM1dhVWdUbAc+AGYGYwwzUj4DYwRgA2FTNFU3UjRRNgM1UWcANwZiUWkEYFY0AG9TZARnAW9TMQItW3EDYlFoBSFXJVUgVG0HdABpBjUMbFIyA2MEZgNuU2ZVPVJvUSgDdVE/AGsGP1E2BDlWMABqUzIEZAFiUzQCMFsyAzdRNwUpV35VdVRuB2oAdwZsDGFSIAMgBCIDIFNvVT5SYFE7AzdRYwA1BmtRaAQwVjAAe1NyBDsBJ1M6AjBbOAMoUT8FM1doVX1UOQc2ADAGfwxgUj4DZwR8A3FTNlVgUiBRYANeUTUAbQZnUWAEKlYnAClTfgQiATJTWAJ2W2ADO1E+" class="text-primary hover:underline flex items-center"
+                                        data-cn="下载 <i class='fa fa-download ml-2'></i>"
+                                        data-en="Download <i class='fa fa-download ml-2'></i>"
+                                        data-jp="ダウンロード <i class='fa fa-download ml-2'></i>">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-medium text-gray-900"
+                                        data-cn="日本研究生申请攻略与模板" data-en="Japan Graduate School Application Guide and Templates" data-jp="日本の大学院申請攻略とテンプレート">
+                                    </div>
+                                    <div class="text-sm text-gray-500"
+                                        data-cn="包含研究计划书、邮件模板、申请流程说明" data-en="Including research plans, email templates, application process descriptions" data-jp="研究計画書、メールテンプレート、申請プロセスの説明が含まれます">
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="ZIP" data-en="ZIP" data-jp="ZIP">
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="2025年7月28日" data-en="July 28, 2025" data-jp="2025年7月28日">
+                                </td>
+                                <td class="py-4 px-6 text-sm">
+                                    <a href="#" class="text-primary hover:underline flex items-center"
+                                        data-cn="下载 <i class='fa fa-download ml-2'></i>"
+                                        data-en="Download <i class='fa fa-download ml-2'></i>"
+                                        data-jp="ダウンロード <i class='fa fa-download ml-2'></i>">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-medium text-gray-900"
+                                        data-cn="常用编程学习资源汇总" data-en="Summary of Common Programming Learning Resources" data-jp="一般的なプログラミング学習リソースの集約">
+                                    </div>
+                                    <div class="text-sm text-gray-500"
+                                        data-cn="包含Python/Java/C++学习资料、项目实战案例" data-en="Including Python/Java/C++ learning materials, project practice cases" data-jp="Python/Java/C++の学習資料、プロジェクト実践ケースが含まれます">
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="PDF/HTML" data-en="PDF/HTML" data-jp="PDF/HTML">
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="2025年6月10日" data-en="June 10, 2025" data-jp="2025年6月10日">
+                                </td>
+                                <td class="py-4 px-6 text-sm">
+                                    <a href="#" class="text-primary hover:underline flex items-center"
+                                        data-cn="下载 <i class='fa fa-download ml-2'></i>"
+                                        data-en="Download <i class='fa fa-download ml-2'></i>"
+                                        data-jp="ダウンロード <i class='fa fa-download ml-2'></i>">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-medium text-gray-900"
+                                        data-cn="日语N2备考核心词汇与语法" data-en="Japanese N2 Test Core Vocabulary and Grammar" data-jp="日本語N2試験の核心語彙と文法">
+                                    </div>
+                                    <div class="text-sm text-gray-500"
+                                        data-cn="包含N2考试高频词汇、语法总结与练习" data-en="Including N2 test high-frequency vocabulary, grammar summary and exercises" data-jp="N2試験の高频語彙、文法のまとめと練習が含まれます">
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="PDF/Excel" data-en="PDF/Excel" data-jp="PDF/Excel">
+                                </td>
+                                <td class="py-4 px-6 text-sm text-gray-500"
+                                    data-cn="2025年5月5日" data-en="May 5, 2025" data-jp="2025年5月5日">
+                                </td>
+                                <td class="py-4 px-6 text-sm">
+                                    <a href="#" class="text-primary hover:underline flex items-center"
+                                        data-cn="下载 <i class='fa fa-download ml-2'></i>"
+                                        data-en="Download <i class='fa fa-download ml-2'></i>"
+                                        data-jp="ダウンロード <i class='fa fa-download ml-2'></i>">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <p class="text-gray-600 mb-4"
+                        data-cn="如果需要其他资源或有任何建议，请通过下方联系方式告诉我"
+                        data-en="If you need other resources or have any suggestions, please let me know through the contact information below"
+                        data-jp="他のリソースが必要な場合、または提案がある場合は、下記の連絡先で教えてください">
+                    </p>
+                    <a href="https://huyang3780.top/index.html#contact" class="inline-flex items-center px-6 py-3 bg-white text-dark rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-100"
+                        data-cn="联系我 <i class='fa fa-envelope ml-2'></i>"
+                        data-en="Contact Me <i class='fa fa-envelope ml-2'></i>"
+                        data-jp="連絡する <i class='fa fa-envelope ml-2'></i>">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+	<br>
+	<br>
+	<br>
+	
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="#learning" class="text-gray-400 hover:text-white transition-colors" data-cn="学习资源" data-en="Learning Resources" data-jp="学習リソース"></a>
+                    <a href="#studyabroad" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad Materials" data-jp="留学資料"></a>
+                    <a href="#tools" class="text-gray-400 hover:text-white transition-colors" data-cn="工具推荐" data-en="Tool Recommendations" data-jp="ツール推奨"></a>
+                    <a href="#downloads" class="text-gray-400 hover:text-white transition-colors" data-cn="资源下载" data-en="Resource Downloads" data-jp="リソースダウンロード"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

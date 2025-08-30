@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 语言学习资源" data-cn="Jeffery Hu | 语言学习资源" data-en="Jeffery Hu | Language Learning Resources" data-jp="Jeffery Hu | 言語学習リソース">
+    <meta property="og:description" content="多语言学习资料与工具推荐" data-cn="多语言学习资料与工具推荐" data-en="Multilingual learning materials and tool recommendations" data-jp="多言語学習資料とツール推奨">
+    <meta property="og:url" content="https://resource.huyang3780.top/study-resource.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 语言学习资源" data-en="Jeffery Hu | Language Learning Resources" data-jp="Jeffery Hu | 言語学習リソース"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+    <style>
+        .resource-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .resource-section:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .resource-item {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--tw-border-color);
+        }
+        .section-divider {
+            height: 2px;
+            width: 60px;
+            margin: 1rem 0 2rem;
+            border-radius: 1px;
+        }
+        .resource-btn {
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
+        }
+        .resource-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+        }
+        .section-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100 text-primary" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10 max-w-5xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="语言学习" data-en="Language Learning" data-jp="言語学習">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="多语言学习资源" data-en="Multilingual Learning Resources" data-jp="多言語学習リソース">
+                </h2>
+                <p class="text-gray-600 text-lg"
+                    data-cn="精选英语、日语等多语言学习资料、工具和方法，帮助你高效掌握外语技能"
+                    data-en="Selected English, Japanese and other multilingual learning materials, tools and methods to help you master foreign language skills efficiently"
+                    data-jp="英語、日本語などの多言語学習資料、ツール、方法を精選し、効率的に外国語スキルを習得するのに役立ちます">
+                </p>
+            </div>
+
+            <!-- 英语学习资源 -->
+            <div class="resource-section" style="--tw-border-color: var(--tw-color-primary);">
+                <div class="section-icon bg-primary/10 text-primary">
+                    <i class="fa fa-globe text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2"
+                    data-cn="英语学习资源" data-en="English Learning Resources" data-jp="英語学習リソース">
+                </h3>
+                <div class="section-divider bg-primary"></div>
+
+                <!-- 词汇与语法 -->
+                <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                    data-cn="词汇与语法" data-en="Vocabulary & Grammar" data-jp="語彙と文法">
+                </h4>
+
+                <div class="resource-item" style="--tw-border-color: rgba(59, 130, 246, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="Anki记忆卡（科学记忆系统）" data-en="Anki Flashcards (scientific memory system)" data-jp="Ankiフラッシュカード（科学的記憶システム）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="基于间隔重复算法的记忆卡片工具，可自定义词汇卡片，支持图片、音频等多媒体内容，适合长期记忆外语词汇和语法点。"
+                        data-en="A flashcard tool based on spaced repetition algorithm, allowing custom vocabulary cards with images, audio and other multimedia content, suitable for long-term memory of foreign language vocabulary and grammar points."
+                        data-jp="間隔反復アルゴリズムに基づくフラッシュカードツールで、画像、オーディオなどのマルチメディアコンテンツを含むカスタム語彙カードを作成でき、外国語の語彙と文法ポイントの長期記憶に適しています。">
+                    </p>
+                    <a href="https://apps.ankiweb.net/" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(59, 130, 246, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="Grammarly（语法检查与改进）" data-en="Grammarly (grammar checking & improvement)" data-jp="Grammarly（文法チェックと改善）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="人工智能驱动的语法检查工具，不仅能检测语法错误，还能提供风格建议、词汇优化和 plagiarism 检查，适合提升英语写作质量。"
+                        data-en="An AI-powered grammar checking tool that not only detects grammatical errors but also provides style suggestions, vocabulary optimization, and plagiarism checks, suitable for improving English writing quality."
+                        data-jp="AI駆動の文法チェックツールで、文法エラーを検出するだけでなく、スタイルの提案、語彙の最適化、剽窃チェックも提供し、英語の作文質を向上させるのに適しています。">
+                    </p>
+                    <a href="https://www.grammarly.com/" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(59, 130, 246, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="《English Grammar in Use》系列教材" data-en="&quot;English Grammar in Use&quot; series" data-jp="「English Grammar in Use」シリーズ教材">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="由剑桥大学出版社出版的经典语法教材，适合中高级学习者，每个语法点都配有清晰解释和实用练习，附带答案便于自学。"
+                        data-en="A classic grammar textbook published by Cambridge University Press, suitable for intermediate to advanced learners, with clear explanations and practical exercises for each grammar point, accompanied by answers for self-study."
+                        data-jp="ケンブリッジ大学出版局から出版された古典的な文法教材で、中級から上級学習者に適しており、各文法ポイントには明確な説明と実用的な練習問題が付属し、自習に便利な解答も付いています。">
+                    </p>
+                    <a href="https://www.cambridge.org/gb/education/subjects/english-language-teaching/grammar-vocabulary-and-pronunciation/english-grammar-use" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="查看详情" data-en="View Details" data-jp="詳細を表示"></span>
+                    </a>
+                </div>
+
+                <!-- 听说能力 -->
+                <h4 class="text-xl font-semibold mb-4 mt-8 text-dark/80"
+                    data-cn="听说能力" data-en="Listening & Speaking" data-jp="聴解と会話能力">
+                </h4>
+
+                <div class="resource-item" style="--tw-border-color: rgba(59, 130, 246, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="BBC Learning English（听力素材库）" data-en="BBC Learning English (listening material library)" data-jp="BBC Learning English（リスニング素材ライブラリ）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="英国广播公司提供的免费英语学习平台，包含不同难度的听力材料、播客和视频，涵盖新闻、日常对话等多种场景，附带文本和练习题。"
+                        data-en="A free English learning platform provided by the BBC, containing listening materials, podcasts and videos of varying difficulty, covering various scenarios such as news and daily conversations, with texts and practice questions."
+                        data-jp="BBCが提供する無料の英語学習プラットフォームで、さまざまな難易度のリスニング素材、ポッドキャスト、ビデオが含まれ、ニュース、日常会話など多様なシーンをカバーし、テキストと練習問題が付属しています。">
+                    </p>
+                    <a href="https://www.bbc.co.uk/learningenglish" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(59, 130, 246, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="Cambly（与母语者实时对话）" data-en="Cambly (real-time conversation with native speakers)" data-jp="Cambly（ネイティブスピーカーとのリアルタイム会話）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="提供与英语母语者一对一视频会话的平台，无需预约即可随时练习口语，适合克服开口恐惧，提升流利度和发音准确性。"
+                        data-en="A platform that provides one-on-one video conversations with native English speakers, allowing instant speaking practice without appointments, suitable for overcoming speaking anxiety and improving fluency and pronunciation accuracy."
+                        data-jp="英語ネイティブスピーカーとの一対一ビデオ会話を提供するプラットフォームで、予約なしでいつでも会話練習ができ、発言の不安を克服し、流暢さと発音の正確性を向上させるのに適しています。">
+                    </p>
+                    <a href="https://www.cambly.com/" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 日语学习资源 -->
+            <div class="resource-section" style="--tw-border-color: var(--tw-color-secondary);">
+                <div class="section-icon bg-secondary/10 text-secondary">
+                    <i class="fa fa-language text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2"
+                    data-cn="日语学习资源" data-en="Japanese Learning Resources" data-jp="日本語学習リソース">
+                </h3>
+                <div class="section-divider bg-secondary"></div>
+
+                <!-- 基础学习 -->
+                <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                    data-cn="基础学习" data-en="Basic Learning" data-jp="基礎学習">
+                </h4>
+
+                <div class="resource-item" style="--tw-border-color: rgba(16, 185, 129, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="《大家的日语》系列教材" data-en="&quot;Minna no Nihongo&quot; series" data-jp="「みんなの日本語」シリーズ教材">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="日本语教育振兴协会推荐教材，注重实用会话能力培养，语法讲解简洁明了，配套听力CD帮助训练听说能力，适合日语入门学习者。"
+                        data-en="Recommended textbook by the Japan Foundation for Japanese Language Education, focusing on practical conversation skills, with concise grammar explanations and accompanying listening CDs to help train listening and speaking skills, suitable for beginner Japanese learners."
+                        data-jp="日本語教育振興協会推薦教材で、実用的な会話能力の育成に重点を置き、文法の説明が簡潔明瞭で、付属のリスニングCDが聴解と会話能力の訓練に役立ち、日本語初心者に適しています。">
+                    </p>
+                    <a href="https://www.3a.co.jp/minna/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="查看详情" data-en="View Details" data-jp="詳細を表示"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(16, 185, 129, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="MOJi辞書（日语词典与学习）" data-en="MOJi Dictionary (Japanese dictionary & learning)" data-jp="MOJi辞書（日本語辞書と学習）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="专为日语学习者设计的词典应用，提供假名注音、例句、同义词辨析和记忆卡片功能，支持离线查询，适合日常单词积累。"
+                        data-en="A dictionary app designed specifically for Japanese learners, providing kana phonetic notation, example sentences, synonym discrimination, and flashcard functions, supporting offline query, suitable for daily vocabulary accumulation."
+                        data-jp="日本語学習者のために設計された辞書アプリで、仮名注音、例文、同義語の区別、フラッシュカード機能を提供し、オフライン検索に対応しており、日常的な単語の蓄積に適しています。">
+                    </p>
+                    <a href="https://www.mojidict.com/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <!-- 能力考与进阶 -->
+                <h4 class="text-xl font-semibold mb-4 mt-8 text-dark/80"
+                    data-cn="能力考与进阶" data-en="Proficiency Test & Advanced" data-jp="能力試験と上級学習">
+                </h4>
+
+                <div class="resource-item" style="--tw-border-color: rgba(16, 185, 129, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="JLPT历年真题与解析" data-en="JLPT past exams & analysis" data-jp="JLPT過去問題と解析">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="日本语能力测试历年真题集及详细解析，包含听力原文和解题技巧，帮助考生熟悉题型和难度，针对性备考N1-N5各级别考试。"
+                        data-en="Collection of past JLPT exams and detailed analysis, including listening scripts and problem-solving skills, helping candidates familiarize themselves with question types and difficulty levels, and prepare for N1-N5 level exams."
+                        data-jp="日本語能力試験の過去問題集と詳細な解析で、リスニングスクリプトと問題解決のコツが含まれ、受験者が問題形式と難易度に慣れ、N1-N5の各レベルの試験に的を絞って準備するのに役立ちます。">
+                    </p>
+                    <a href="https://www.jlpt.jp/e/samples/sampleindex.html" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="官方样题" data-en="Official Samples" data-jp="公式サンプル問題"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(16, 185, 129, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="NHK News Web Easy（简易新闻阅读）" data-en="NHK News Web Easy (simple news reading)" data-jp="NHKニュースWeb Easy（簡易ニュース閲覧）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="NHK提供的简易日语新闻网站，使用基础词汇和短句，汉字标注假名，适合中高级学习者通过阅读真实新闻提升词汇量和阅读理解能力。"
+                        data-en="A simple Japanese news website provided by NHK, using basic vocabulary and short sentences with kana annotations for kanji, suitable for intermediate to advanced learners to improve vocabulary and reading comprehension through real news."
+                        data-jp="NHKが提供する簡易日本語ニュースサイトで、基本的な語彙と短い文を使用し、漢字には仮名が注釈されており、中級から上級学習者が実際のニュースを読むことで語彙量と読解力を向上させるのに適しています。">
+                    </p>
+                    <a href="https://www3.nhk.or.jp/news/easy/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问网站" data-en="Visit Website" data-jp="ウェブサイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 高效语言学习方法 -->
+            <div class="resource-section" style="--tw-border-color: var(--tw-color-accent);">
+                <div class="section-icon bg-accent/10 text-accent">
+                    <i class="fa fa-lightbulb-o text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2"
+                    data-cn="高效语言学习方法" data-en="Efficient Language Learning Methods" data-jp="効率的な言語学習方法">
+                </h3>
+                <div class="section-divider bg-accent"></div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(236, 72, 153, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="间隔重复记忆法（Spaced Repetition）" data-en="Spaced Repetition System" data-jp="間隔反復記憶法（Spaced Repetition）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="基于记忆曲线理论的学习方法，通过有规律的复习间隔强化记忆，适用于词汇、语法等知识点的长期记忆，Anki等工具基于此原理开发。"
+                        data-en="A learning method based on memory curve theory, which strengthens memory through regular review intervals, suitable for long-term memory of vocabulary, grammar and other knowledge points, and tools like Anki are developed based on this principle."
+                        data-jp="記憶曲線理論に基づく学習方法で、規則的な復習間隔を通じて記憶を強化し、語彙、文法などの知識ポイントの長期記憶に適しており、Ankiなどのツールはこの原理に基づいて開発されています。">
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Spaced_repetition" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="了解更多" data-en="Learn More" data-jp="詳細を知る"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(236, 72, 153, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="沉浸式学习与环境构建" data-en="Immersive learning & environment building" data-jp="没入型学習と環境構築">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="通过调整生活环境创造目标语言使用场景，如更换手机系统语言、贴标签、听播客等，让语言学习融入日常生活，培养语感和反应能力。"
+                        data-en="Create target language usage scenarios by adjusting the living environment, such as changing mobile phone system language, pasting labels, listening to podcasts, etc., to integrate language learning into daily life and cultivate language sense and reaction ability."
+                        data-jp="携帯電話のシステム言語の変更、ラベルの貼り付け、ポッドキャストの視聴など、生活環境を調整することで対象言語の使用シーンを作り出し、言語学習を日常生活に統合し、語感と反応能力を養います。">
+                    </p>
+                    <a href="https://www.fluentin3months.com/immersion/" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="实践指南" data-en="Practical Guide" data-jp="実践ガイド"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(236, 72, 153, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="输入输出平衡训练法" data-en="Input-output balance training" data-jp="入力出力バランストレーニング法">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="强调听力阅读（输入）与口语写作（输出）的平衡练习，通过影子跟读法、日记写作、语言交换等方式，避免单纯输入导致的“哑巴外语”问题。"
+                        data-en="Emphasizes balanced practice of listening and reading (input) and speaking and writing (output), avoiding the problem of 'dumb foreign language' caused by pure input through shadowing, diary writing, language exchange, etc."
+                        data-jp="聴解と読解（入力）、会話と作文（出力）のバランスの取れた練習を強調し、シャドーイング、日記の書き方、語学交換などの方法を通じて、単なる入力によって引き起こされる「黙ってしまう外国語」の問題を回避します。">
+                    </p>
+                    <a href="https://www.lingq.com/blog/language-learning-input-output/" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="方法详解" data-en="Detailed Methods" data-jp="方法の詳細"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 通用语言学习工具 -->
+            <div class="resource-section" style="--tw-border-color: var(--tw-color-zhihu);">
+                <div class="section-icon bg-zhihu/10 text-zhihu">
+                    <i class="fa fa-wrench text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2"
+                    data-cn="通用语言学习工具" data-en="Universal Language Learning Tools" data-jp="汎用言語学習ツール">
+                </h3>
+                <div class="section-divider bg-zhihu"></div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(15, 136, 235, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="Anki（跨语言记忆卡）" data-en="Anki (cross-language flashcards)" data-jp="Anki（多言語フラッシュカード）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="支持多语言学习的记忆卡片工具，可自定义卡片内容和学习计划，社区共享大量现成卡组，适用于各种语言的词汇和知识点记忆。"
+                        data-en="A flashcard tool supporting multilingual learning, allowing custom card content and study plans, with a large number of ready-made card decks shared by the community, suitable for memorizing vocabulary and knowledge points in various languages."
+                        data-jp="多言語学習をサポートするフラッシュカードツールで、カードの内容と学習計画をカスタマイズでき、コミュニティで多くの既製のカードデッキが共有されており、さまざまな言語の語彙と知識ポイントの記憶に適しています。">
+                    </p>
+                    <a href="https://apps.ankiweb.net/" target="_blank" class="resource-btn inline-flex items-center bg-zhihu text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(15, 136, 235, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="DeepL（高质量翻译工具）" data-en="DeepL (high-quality translation tool)" data-jp="DeepL（高品質翻訳ツール）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="AI驱动的翻译工具，翻译质量优于传统机器翻译，支持26种语言互译，保留原文风格和语境，适合阅读外文资料和写作辅助。"
+                        data-en="An AI-powered translation tool with better quality than traditional machine translation, supporting mutual translation between 26 languages, preserving the original style and context, suitable for reading foreign language materials and writing assistance."
+                        data-jp="AI駆動の翻訳ツールで、従来の機械翻訳よりも品質が優れており、26言語間の相互翻訳をサポートし、原文のスタイルと文脈を保持し、外国語資料の閲覧と作文支援に適しています。">
+                    </p>
+                    <a href="https://www.deepl.com/" target="_blank" class="resource-btn inline-flex items-center bg-zhihu text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(15, 136, 235, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="Italki（在线语言家教平台）" data-en="Italki (online language tutoring platform)" data-jp="Italki（オンライン言語家庭教師プラットフォーム）">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="提供全球语言家教服务的平台，可找到100多种语言的母语者教师，根据需求选择一对一课程，灵活安排学习时间和内容。"
+                        data-en="A platform providing global language tutoring services, where you can find native teachers of more than 100 languages, choose one-on-one courses according to your needs, and flexibly arrange study time and content."
+                        data-jp="世界中の言語家庭教師サービスを提供するプラットフォームで、100以上の言語のネイティブ教師を見つけることができ、ニーズに応じて一対一のコースを選択し、学習時間と内容を柔軟に手配できます。">
+                    </p>
+                    <a href="https://www.italki.com/" target="_blank" class="resource-btn inline-flex items-center bg-zhihu text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 其他语言资源 -->
+            <div class="resource-section" style="--tw-border-color: var(--tw-color-weibo);">
+                <div class="section-icon bg-weibo/10 text-weibo">
+                    <i class="fa fa-flag text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2"
+                    data-cn="其他语言资源" data-en="Other Language Resources" data-jp="その他の言語リソース">
+                </h3>
+                <div class="section-divider bg-weibo"></div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(230, 22, 45, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="德语：DW Learn German" data-en="German: DW Learn German" data-jp="ドイツ語：DW Learn German">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="德国之声提供的免费德语学习平台，包含视频课程、语法讲解和文化知识，适合各阶段学习者，注重实用交流能力培养。"
+                        data-en="A free German learning platform provided by Deutsche Welle, including video courses, grammar explanations and cultural knowledge, suitable for learners at all stages, focusing on practical communication skills."
+                        data-jp="ドイツ放送協会が提供する無料のドイツ語学習プラットフォームで、ビデオコース、文法の説明、文化知識が含まれ、すべての段階の学習者に適しており、実用的なコミュニケーション能力の育成に重点を置いています。">
+                    </p>
+                    <a href="https://learngerman.dw.com/en" target="_blank" class="resource-btn inline-flex items-center bg-weibo text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(230, 22, 45, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="法语：France 24 学习频道" data-en="French: France 24 learning channel" data-jp="フランス語：France 24学習チャンネル">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="法国24小时新闻台提供的法语学习频道，通过新闻视频学习实用法语，了解法国文化和国际时事，适合中高级学习者提升阅读和听力。"
+                        data-en="A French learning channel provided by France 24, learning practical French through news videos, understanding French culture and international current affairs, suitable for intermediate to advanced learners to improve reading and listening."
+                        data-jp="フランス24時間ニュース局が提供するフランス語学習チャンネルで、ニュースビデオを通じて実用的なフランス語を学び、フランス文化と国際時事を理解し、中級から上級学習者の読解力と聴解力を向上させるのに適しています。">
+                    </p>
+                    <a href="https://www.france24.com/fr/" target="_blank" class="resource-btn inline-flex items-center bg-weibo text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(230, 22, 45, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="西班牙语：Duolingo 专项课程" data-en="Spanish: Duolingo special courses" data-jp="スペイン語：Duolingo特別コース">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="Duolingo提供的西班牙语课程，采用游戏化学习方式，适合零基础入门，通过短句练习和情景对话培养基础听说能力和词汇量。"
+                        data-en="Spanish courses provided by Duolingo, using gamified learning methods, suitable for zero-based beginners, cultivating basic listening and speaking skills and vocabulary through short sentence exercises and situational dialogues."
+                        data-jp="Duolingoが提供するスペイン語コースで、ゲーム化された学習方法を採用し、ゼロベースの初心者に適しており、短い文の練習とシチュエーション対話を通じて基本的な聴解・会話能力と語彙を養成します。">
+                    </p>
+                    <a href="https://www.duolingo.com/course/es/en/Learn-Spanish" target="_blank" class="resource-btn inline-flex items-center bg-weibo text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问课程" data-en="Access Course" data-jp="コースにアクセス"></span>
+                    </a>
+                </div>
+
+                <div class="resource-item" style="--tw-border-color: rgba(230, 22, 45, 0.3);">
+                    <h5 class="font-medium text-lg mb-2"
+                        data-cn="韩语：TalkToMeInKorean" data-en="Korean: TalkToMeInKorean" data-jp="韓国語：TalkToMeInKorean">
+                    </h5>
+                    <p class="text-gray-600 mb-3"
+                        data-cn="专注于韩语学习的平台，提供免费播客、视频教程和教材，从基础发音到高级会话全覆盖，注重实用表达和韩国文化介绍。"
+                        data-en="A platform focusing on Korean learning, providing free podcasts, video tutorials and teaching materials, covering everything from basic pronunciation to advanced conversations, focusing on practical expressions and introduction to Korean culture."
+                        data-jp="韓国語学習に特化したプラットフォームで、無料のポッドキャスト、ビデオチュートリアル、教材を提供し、基本的な発音から上級会話まで全てをカバーし、実用的な表現と韓国文化の紹介に重点を置いています。">
+                    </p>
+                    <a href="https://talktomeinkorean.com/" target="_blank" class="resource-btn inline-flex items-center bg-weibo text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 计算机专业核心资源" data-cn="Jeffery Hu | 计算机专业核心资源" data-en="Jeffery Hu | Core Computer Resources" data-jp="Jeffery Hu | コンピュータ核心リソース">
+    <meta property="og:description" content="计算机专业核心学习资源汇总" data-cn="计算机专业核心学习资源汇总" data-en="Collection of core computer science learning resources" data-jp="コンピュータサイエンスの核心学習リソース集約">
+    <meta property="og:url" content="https://resource.huyang3780.top/main-resource.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 计算机专业核心资源" data-en="Jeffery Hu | Core Computer Resources" data-jp="Jeffery Hu | コンピュータ核心リソース"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-section {
+                @apply bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-10 transition-all duration-300 hover:shadow-xl;
+            }
+            .resource-item {
+                @apply bg-softGray rounded-xl p-5 mb-6 transition-all duration-300 hover:bg-softBlue/50;
+            }
+            .section-icon {
+                @apply w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4;
+            }
+            .section-header {
+                @apply flex items-center mb-6 pb-3 border-b border-gray-200;
+            }
+            .resource-btn {
+                @apply inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300 ml-2;
+            }
+            .resource-btn-outline {
+                @apply inline-flex items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-all duration-300;
+            }
+        }
+		.content-section {
+		  /* 替换原有实色背景为半透明 */
+		  background: rgba(255, 255, 255, 0.7);
+		  backdrop-filter: blur(8px);
+		  transition: all 0.3s ease;
+		}
+
+		.content-section:hover {
+		  transform: translateY(-5px);
+		  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+		}
+
+		.resource-item {
+		  /* 资源项卡片也使用半透明风格 */
+		  background: rgba(245, 247, 250, 0.8);
+		  transition: all 0.3s ease;
+		}
+
+		.resource-item:hover {
+		  transform: translateX(5px);
+		}
+		/* 操作系统板块 - 蓝色系 */
+		.os-section {
+		  background: rgba(225, 245, 254, 0.7); /* softBlue半透明 */
+		}
+		.os-section .section-icon {
+		  background-color: rgba(59, 130, 246, 0.1); /* primary/10 */
+		  color: #3B82F6; /* primary */
+		}
+		.os-section .section-divider {
+		  background-color: #3B82F6; /* primary */
+		}
+
+		/* 算法与数据结构板块 - 绿色系 */
+		.algorithm-section {
+		  background: rgba(232, 245, 233, 0.7); /* softGreen半透明 */
+		}
+		.algorithm-section .section-icon {
+		  background-color: rgba(16, 185, 129, 0.1); /* secondary/10 */
+		  color: #10B981; /* secondary */
+		}
+		.algorithm-section .section-divider {
+		  background-color: #10B981; /* secondary */
+		}
+
+		/* 编程语言板块 - 粉色系 */
+		.language-section {
+		  background: rgba(255, 235, 238, 0.7); /* softPink半透明 */
+		}
+		.language-section .section-icon {
+		  background-color: rgba(236, 72, 153, 0.1); /* accent/10 */
+		  color: #EC4899; /* accent */
+		}
+		.language-section .section-divider {
+		  background-color: #EC4899; /* accent */
+		}
+		.resource-btn {
+		  transition: all 0.2s ease;
+		}
+		.resource-btn:hover {
+		  transform: scale(1.05);
+		  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+		}
+
+		.resource-btn-outline {
+		  transition: all 0.2s ease;
+		}
+		.resource-btn-outline:hover {
+		  transform: scale(1.05);
+		}
+
+    </style>
+	
+	<link rel="stylesheet" href="src/css.css">
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100 text-primary" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10 max-w-5xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="学习资源" data-en="Learning Resources" data-jp="学習リソース">
+                </span>
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="计算机专业核心资源" data-en="Core Computer Science Resources" data-jp="コンピュータサイエンスの核心リソース">
+                </h1>
+                <p class="text-gray-600 text-lg"
+                    data-cn="精选计算机领域核心课程学习资料、实践项目和参考书籍，帮助你系统掌握专业知识"
+                    data-en="Selected core course materials, practical projects and reference books in computer science to help you master professional knowledge systematically"
+                    data-jp="コンピュータ分野の核心コース学習資料、実践プロジェクトと参考書籍を精選し、専門知識を体系的に習得するのに役立ちます">
+                </p>
+            </div>
+
+            <!-- 操作系统资源 -->
+            <div class="content-section os-section">
+				<div class="section-header">
+					<div class="section-icon">
+					    <i class="fa fa-cogs text-2xl"></i>
+					</div>
+					<h2 class="text-2xl md:text-3xl font-bold"
+						data-cn="操作系统" data-en="Operating Systems" data-jp="オペレーティングシステム">
+					</h2>
+				</div>
+				<!-- 添加分隔线 -->
+				<div class="section-divider"></div>
+
+                <div class="pl-16">
+                    <!-- 经典教材 -->
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800"
+                        data-cn="经典教材" data-en="Classic Textbooks" data-jp="古典的な教科書">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《操作系统概念》" data-en="&quot;Operating System Concepts&quot;" data-jp="「オペレーティングシステムの概念」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="被誉为操作系统领域的圣经，全面覆盖操作系统的基本概念、原理和实践。书中详细讲解了进程管理、内存管理、文件系统、设备管理等核心内容。"
+                            data-en="Known as the bible in the field of operating systems, it comprehensively covers the basic concepts, principles and practices of operating systems. The book details core content such as process management, memory management, file systems, and device management."
+                            data-jp="オペレーティングシステム分野の聖書と呼ばれ、オペレーティングシステムの基本概念、原理、実践を網羅しています。プロセス管理、メモリ管理、ファイルシステム、デバイス管理などの核心的な内容が詳細に説明されています。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-file-pdf-o mr-2"></i>
+                                <span data-cn="电子版" data-en="E-book" data-jp="電子書籍"></span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《深入理解计算机系统》" data-en="&quot;Computer Systems: A Programmer's Perspective&quot;" data-jp="「コンピュータシステム：プログラマーの視点」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="从程序员的角度深入探讨计算机系统的本质，涵盖了从硬件到软件的各个层面，包括操作系统、汇编语言、计算机组成等内容，是理解计算机系统工作原理的绝佳教材。"
+                            data-en="Explores the nature of computer systems from a programmer's perspective, covering everything from hardware to software, including operating systems, assembly language, computer organization, etc. It is an excellent textbook for understanding how computer systems work."
+                            data-jp="プログラマーの視点からコンピュータシステムの本質を詳しく探り、ハードウェアからソフトウェアまで、オペレーティングシステム、アセンブリ言語、コンピュータ構成などを網羅しており、コンピュータシステムの動作原理を理解するのに最適な教科書です。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-file-pdf-o mr-2"></i>
+                                <span data-cn="电子版" data-en="E-book" data-jp="電子書籍"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 优质课程 -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="优质课程" data-en="Quality Courses" data-jp="優質コース">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="MIT 6.828 操作系统工程" data-en="MIT 6.828 Operating System Engineering" data-jp="MIT 6.828 オペレーティングシステム工学"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="麻省理工学院的经典操作系统课程，通过动手实践来学习操作系统设计与实现。课程包含多个实验，学生需要构建一个小型操作系统内核，深入理解操作系统的核心概念。"
+                            data-en="MIT's classic operating systems course that teaches operating system design and implementation through hands-on practice. The course includes several labs where students build a small operating system kernel to gain a deep understanding of core OS concepts."
+                            data-jp="マサチューセッツ工科大学の古典的なオペレーティングシステムコースで、実践を通じてオペレーティングシステムの設計と実装を学びます。コースには複数の実験が含まれており、学生は小型のオペレーティングシステムカーネルを構築し、OSの核心概念を深く理解する必要があります。">
+                        </p>
+                        <a href="https://pdos.csail.mit.edu/6.828/" target="_blank" class="resource-btn">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="访问课程" data-en="Visit Course" data-jp="コースを訪問"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="清华大学操作系统课程" data-en="Tsinghua University OS Course" data-jp="清華大学オペレーティングシステムコース"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="清华大学计算机系开设的操作系统课程，结合理论与实践，内容涵盖进程管理、内存管理、文件系统等核心知识点，并配有相应的实验项目。"
+                            data-en="An operating systems course offered by Tsinghua University's Computer Science Department, combining theory and practice. It covers core knowledge points such as process management, memory management, and file systems, with corresponding lab projects."
+                            data-jp="清華大学コンピュータ学部が開講するオペレーティングシステムコースで、理論と実践を組み合わせて、プロセス管理、メモリ管理、ファイルシステムなどの核心的な知識点をカバーし、対応する実験プロジェクトが付属しています。">
+                        </p>
+                        <a href="#" class="resource-btn">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="访问课程" data-en="Visit Course" data-jp="コースを訪問"></span>
+                        </a>
+                    </div>
+
+                    <!-- 实践项目 -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="实践项目" data-en="Practical Projects" data-jp="実践プロジェクト">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="xv6操作系统实验" data-en="xv6 Operating System Experiments" data-jp="xv6オペレーティングシステム実験"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="xv6是一个基于Unix V6的教学操作系统，用于学习操作系统的基本概念和实现。通过修改和扩展xv6内核，可以深入理解进程调度、内存管理、文件系统等操作系统核心功能。"
+                            data-en="xv6 is a teaching operating system based on Unix V6, used to learn basic OS concepts and implementations. By modifying and extending the xv6 kernel, you can gain a deep understanding of core OS functions such as process scheduling, memory management, and file systems."
+                            data-jp="xv6はUnix V6に基づく教育用オペレーティングシステムで、オペレーティングシステムの基本概念と実装を学ぶために使用されます。xv6カーネルを変更および拡張することで、プロセススケジューリング、メモリ管理、ファイルシステムなどのオペレーティングシステムの核心機能を深く理解することができます。">
+                        </p>
+                        <a href="https://github.com/mit-pdos/xv6-public" target="_blank" class="resource-btn">
+                            <i class="fa fa-github mr-2"></i>
+                            <span data-cn="查看项目" data-en="View Project" data-jp="プロジェクトを表示"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="Linux内核模块开发" data-en="Linux Kernel Module Development" data-jp="Linuxカーネルモジュール開発"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="通过开发Linux内核模块，学习Linux操作系统的内部工作原理。项目包括开发简单的设备驱动、系统调用和内核服务，帮助理解Linux内核的设计与实现。"
+                            data-en="Learn the inner workings of the Linux operating system by developing Linux kernel modules. Projects include developing simple device drivers, system calls, and kernel services to help understand the design and implementation of the Linux kernel."
+                            data-jp="Linuxカーネルモジュールを開発することで、Linuxオペレーティングシステムの内部動作原理を学びます。プロジェクトには簡単なデバイスドライバ、システムコール、カーネルサービスの開発が含まれており、Linuxカーネルの設計と実装を理解するのに役立ちます。">
+                        </p>
+                        <a href="https://tldp.org/LDP/lkmpg/2.6/html/" target="_blank" class="resource-btn">
+                            <i class="fa fa-book mr-2"></i>
+                            <span data-cn="开发指南" data-en="Development Guide" data-jp="開発ガイド"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 算法与数据结构 -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fa fa-sitemap text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold"
+                        data-cn="算法与数据结构" data-en="Algorithms & Data Structures" data-jp="アルゴリズムとデータ構造">
+                    </h2>
+                </div>
+				<div class="section-divider"></div>
+
+                <div class="pl-16">
+                    <!-- 经典教材 -->
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800"
+                        data-cn="经典教材" data-en="Classic Textbooks" data-jp="古典的な教科書">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《算法导论》" data-en="&quot;Introduction to Algorithms&quot;" data-jp="「アルゴリズム入門」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="算法领域的权威教材，全面覆盖各种算法设计与分析方法。书中详细讲解了排序、查找、图论、动态规划、贪心算法等核心内容，并配有丰富的习题和实例。"
+                            data-en="The authoritative textbook in the field of algorithms, comprehensively covering various algorithm design and analysis methods. The book details core content such as sorting, searching, graph theory, dynamic programming, greedy algorithms, with abundant exercises and examples."
+                            data-jp="アルゴリズム分野の権威的な教科書で、さまざまなアルゴリズム設計と分析方法を網羅しています。ソート、検索、グラフ理論、動的計画法、貪欲アルゴリズムなどの核心的な内容が詳細に説明されており、豊富な問題と例が付属しています。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-file-pdf-o mr-2"></i>
+                                <span data-cn="电子版" data-en="E-book" data-jp="電子書籍"></span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《算法》（第4版）" data-en="&quot;Algorithms&quot; (4th Edition)" data-jp="「アルゴリズム」（第4版）"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="一本广受好评的算法教材，以清晰的讲解和丰富的图示著称。书中涵盖了基础数据结构、排序算法、查找算法、图算法等内容，并提供了大量的Java实现代码。"
+                            data-en="A highly praised algorithm textbook known for its clear explanations and abundant illustrations. It covers basic data structures, sorting algorithms, searching algorithms, graph algorithms, etc., with plenty of Java implementation code."
+                            data-jp="明確な説明と豊富な図示で知られる高く評価されたアルゴリズム教科書です。基本的なデータ構造、ソートアルゴリズム、検索アルゴリズム、グラフアルゴリズムなどをカバーしており、豊富なJava実装コードが提供されています。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-code mr-2"></i>
+                                <span data-cn="代码示例" data-en="Code Examples" data-jp="コード例"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 在线练习 -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="在线练习" data-en="Online Practice" data-jp="オンライン練習">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="LeetCode" data-en="LeetCode" data-jp="LeetCode"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="最受欢迎的算法练习平台之一，包含超过2000道算法题目，涵盖各种难度级别。平台支持多种编程语言，提供详细的题解和讨论区，是准备技术面试的必备资源。"
+                            data-en="One of the most popular algorithm practice platforms, containing over 2000 algorithm problems covering various difficulty levels. The platform supports multiple programming languages, provides detailed solutions and discussion forums, and is an essential resource for technical interview preparation."
+                            data-jp="最も人気のあるアルゴリズム練習プラットフォームの一つで、さまざまな難易度の2000以上のアルゴリズム問題が含まれています。プラットフォームは複数のプログラミング言語をサポートし、詳細な問題解決策とディスカッションフォーラムを提供しており、技術面接の準備に欠かせないリソースです。">
+                        </p>
+                        <a href="https://leetcode.com/" target="_blank" class="resource-btn">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="访问网站" data-en="Visit Website" data-jp="ウェブサイトを訪問"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="牛客网" data-en="Nowcoder" data-jp="牛客网"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="国内知名的编程练习和求职平台，提供大量的算法题目和模拟面试题。平台包含各大互联网公司的笔试面试真题，适合准备国内技术岗位招聘的同学使用。"
+                            data-en="A well-known domestic programming practice and job-seeking platform that provides a large number of algorithm questions and mock interview questions. The platform includes real written test and interview questions from major Internet companies, suitable for students preparing for domestic technical job recruitment."
+                            data-jp="国内で有名なプログラミング練習と求職プラットフォームで、大量のアルゴリズム問題と模擬面接問題を提供しています。プラットフォームには主要なインターネット企業の筆記試験と面接の真題が含まれており、国内の技術職採用の準備をする学生に適しています。">
+                        </p>
+                        <a href="https://www.nowcoder.com/" target="_blank" class="resource-btn">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="访问网站" data-en="Visit Website" data-jp="ウェブサイトを訪問"></span>
+                        </a>
+                    </div>
+
+                    <!-- 学习笔记 -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="学习笔记" data-en="Study Notes" data-jp="学習ノート">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="常见算法思维导图" data-en="Common Algorithm Mind Maps" data-jp="一般的なアルゴリズムのマインドマップ"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="整理了常见算法的分类、应用场景和实现思路的思维导图集合。通过可视化的方式帮助理解各种算法之间的关系和适用范围，是系统学习算法的好帮手。"
+                            data-en="A collection of mind maps organizing classifications, application scenarios, and implementation ideas of common algorithms. Helps understand the relationships and applicable scopes of various algorithms through visualization, and is a good helper for systematic learning of algorithms."
+                            data-jp="一般的なアルゴリズムの分類、応用シナリオ、実装アイデアを整理したマインドマップのコレクションです。可視化によってさまざまなアルゴリズム間の関係と適用範囲を理解するのに役立ち、アルゴリズムを体系的に学ぶのに役立ちます。">
+                        </p>
+                        <a href="#" class="resource-btn">
+                            <i class="fa fa-image mr-2"></i>
+                            <span data-cn="查看导图" data-en="View Maps" data-jp="マップを表示"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 编程语言 -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fa fa-code text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold"
+                        data-cn="编程语言" data-en="Programming Languages" data-jp="プログラミング言語">
+                    </h2>
+                </div>
+				<div class="section-divider"></div>
+
+                <div class="pl-16">
+                    <!-- Python -->
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800"
+                        data-cn="Python" data-en="Python" data-jp="Python">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="官方文档" data-en="Official Documentation" data-jp="公式ドキュメント"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="Python官方提供的完整文档，包含语言参考、标准库说明、教程等内容。是学习Python最权威、最全面的资源，适合各个层次的开发者查阅。"
+                            data-en="The complete documentation provided by Python official, including language reference, standard library description, tutorials, etc. It is the most authoritative and comprehensive resource for learning Python, suitable for developers at all levels to consult."
+                            data-jp="Python公式が提供する完全なドキュメントで、言語リファレンス、標準ライブラリの説明、チュートリアルなどが含まれています。Pythonを学ぶための最も権威的で全面的なリソースであり、あらゆるレベルの開発者が参照するのに適しています。">
+                        </p>
+                        <a href="https://docs.python.org/" target="_blank" class="resource-btn">
+                            <i class="fa fa-book mr-2"></i>
+                            <span data-cn="浏览文档" data-en="Browse Docs" data-jp="ドキュメントを閲覧"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《Python编程：从入门到实践》" data-en="&quot;Python Crash Course&quot;" data-jp="「Pythonプログラミング：入門から実践まで」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="一本非常适合初学者的Python教材，通过清晰的讲解和实用的项目帮助读者快速掌握Python编程技能。书中包含两个大型项目：一个游戏开发项目和一个Web应用项目。"
+                            data-en="An excellent Python textbook for beginners, helping readers quickly master Python programming skills through clear explanations and practical projects. The book contains two large projects: a game development project and a web application project."
+                            data-jp="初心者に非常に適したPython教科書で、明確な説明と実用的なプロジェクトを通じて読者がPythonプログラミングスキルをすばやく習得するのに役立ちます。本には2つの大きなプロジェクトが含まれています：ゲーム開発プロジェクトとWebアプリケーションプロジェクトです。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-code mr-2"></i>
+                                <span data-cn="示例代码" data-en="Sample Code" data-jp="サンプルコード"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Java -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="Java" data-en="Java" data-jp="Java">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《Java核心技术》" data-en="&quot;Core Java&quot;" data-jp="「Javaコアテクノロジー」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="Java领域的经典教材，分为上下两卷，全面覆盖Java语言基础、面向对象编程、集合框架、多线程、GUI编程等内容。书中包含大量实例代码，适合系统学习Java的开发者。"
+                            data-en="A classic textbook in the Java field, divided into two volumes, comprehensively covering Java language basics, object-oriented programming, collection framework, multi-threading, GUI programming, etc. The book contains a large number of example codes, suitable for developers systematically learning Java."
+                            data-jp="Java分野の古典的な教科書で、上下2巻に分かれており、Java言語の基礎、オブジェクト指向プログラミング、コレクションフレームワーク、マルチスレッド、GUIプログラミングなどを全面的にカバーしています。本には大量の例題コードが含まれており、Javaを体系的に学ぶ開発者に適しています。">
+                        </p>
+                        <a href="#" class="resource-btn">
+                            <i class="fa fa-amazon mr-2"></i>
+                            <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                        </a>
+                    </div>
+
+                    <!-- C/C++ -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="C/C++" data-en="C/C++" data-jp="C/C++">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《C++ Primer》" data-en="&quot;C++ Primer&quot;" data-jp="「C++ Primer」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="C++编程的经典教材，全面介绍C++语言的特性和标准库。书中详细讲解了C++的核心概念，如类、模板、STL等，是学习C++的必备书籍。"
+                            data-en="A classic textbook on C++ programming, comprehensively introducing C++ language features and standard libraries. The book details core C++ concepts such as classes, templates, STL, etc., and is an essential book for learning C++."
+                            data-jp="C++プログラミングの古典的な教科書で、C++言語の機能と標準ライブラリを全面的に紹介しています。本では、クラス、テンプレート、STLなどのC++の核心概念が詳細に説明されており、C++を学ぶための必須の書籍です。">
+                        </p>
+                        <a href="#" class="resource-btn">
+                            <i class="fa fa-amazon mr-2"></i>
+                            <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 计算机网络与数据库 -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fa fa-database text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold"
+                        data-cn="计算机网络与数据库" data-en="Computer Networks & Databases" data-jp="コンピュータネットワークとデータベース">
+                    </h2>
+                </div>
+				<div class="section-divider"></div>
+
+                <div class="pl-16">
+                    <!-- 计算机网络 -->
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800"
+                        data-cn="计算机网络" data-en="Computer Networks" data-jp="コンピュータネットワーク">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《计算机网络：自顶向下方法》" data-en="&quot;Computer Networking: A Top-Down Approach&quot;" data-jp="「コンピュータネットワーク：トップダウンアプローチ」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="计算机网络领域的经典教材，采用自顶向下的方法讲解计算机网络的原理和协议。从应用层开始，逐步深入到物理层，帮助读者理解网络通信的整个过程。"
+                            data-en="A classic textbook in the field of computer networks, explaining the principles and protocols of computer networks using a top-down approach. Starting from the application layer and gradually going down to the physical layer, it helps readers understand the entire process of network communication."
+                            data-jp="コンピュータネットワーク分野の古典的な教科書で、トップダウンアプローチを採用してコンピュータネットワークの原理とプロトコルを説明しています。アプリケーション層から始まり、物理層まで徐々に深入し、読者がネットワーク通信の全過程を理解するのに役立ちます。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-file-pdf-o mr-2"></i>
+                                <span data-cn="电子版" data-en="E-book" data-jp="電子書籍"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 数据库 -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="数据库" data-en="Databases" data-jp="データベース">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="MySQL官方文档" data-en="MySQL Official Documentation" data-jp="MySQL公式ドキュメント"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="MySQL官方提供的完整文档，包含安装配置、SQL语法、数据库管理、性能优化等内容。是学习和使用MySQL数据库的权威参考资料。"
+                            data-en="The complete documentation provided by MySQL official, including installation and configuration, SQL syntax, database management, performance optimization, etc. It is an authoritative reference for learning and using MySQL databases."
+                            data-jp="MySQL公式が提供する完全なドキュメントで、インストールと設定、SQL構文、データベース管理、パフォーマンス最適化などが含まれています。MySQLデータベースを学び、使用するための権威的な参考資料です。">
+                        </p>
+                        <a href="https://dev.mysql.com/doc/" target="_blank" class="resource-btn">
+                            <i class="fa fa-book mr-2"></i>
+                            <span data-cn="浏览文档" data-en="Browse Docs" data-jp="ドキュメントを閲覧"></span>
+                        </a>
+                    </div>
+
+                    <!-- 分布式系统 -->
+                    <h3 class="text-xl font-semibold mb-4 mt-8 text-gray-800"
+                        data-cn="分布式系统" data-en="Distributed Systems" data-jp="分散システム">
+                    </h3>
+                    
+                    <div class="resource-item">
+                        <h4 class="font-bold text-lg mb-2" data-cn="《设计数据密集型应用》" data-en="&quot;Designing Data-Intensive Applications&quot;" data-jp="「データ集約型アプリケーションの設計」"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="一本讲解数据密集型应用系统设计的经典书籍，涵盖分布式系统、数据库、消息队列等内容。书中深入探讨了各种技术的优缺点和适用场景，是构建大型分布式系统的必备参考。"
+                            data-en="A classic book on designing data-intensive application systems, covering distributed systems, databases, message queues, etc. The book deeply explores the advantages, disadvantages and applicable scenarios of various technologies, and is an essential reference for building large-scale distributed systems."
+                            data-jp="データ集約型アプリケーションシステムの設計について説明する古典的な書籍で、分散システム、データベース、メッセージキューなどをカバーしています。本ではさまざまな技術の長所、短所、適用シナリオを詳しく探り、大規模な分散システムを構築するための必須の参考資料です。">
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="resource-btn">
+                                <i class="fa fa-amazon mr-2"></i>
+                                <span data-cn="购买" data-en="Purchase" data-jp="購入"></span>
+                            </a>
+                            <a href="#" class="resource-btn-outline">
+                                <i class="fa fa-github mr-2"></i>
+                                <span data-cn="开源社区" data-en="Open Source Community" data-jp="オープンソースコミュニティ"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

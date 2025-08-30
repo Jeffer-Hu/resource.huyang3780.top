@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 时间管理工具" data-cn="Jeffery Hu | 时间管理工具" data-en="Jeffery Hu | Time Management Tools" data-jp="Jeffery Hu | 時間管理ツール">
+    <meta property="og:description" content="高效学习与时间管理工具推荐" data-cn="高效学习与时间管理工具推荐" data-en="Efficient study and time management tools" data-jp="効率的な学習と時間管理ツールの推奨">
+    <meta property="og:url" content="https://resource.huyang3780.top/time.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 高效学习与时间管理" data-en="Jeffery Hu | Efficient Study & Time Management" data-jp="Jeffery Hu | 効率的な学習と時間管理"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline text-primary" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100 text-primary" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="时间管理" data-en="Time Management" data-jp="時間管理">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="高效学习与时间管理" data-en="Efficient Study & Time Management" data-jp="効率的な学習と時間管理">
+                </h2>
+                <p class="text-gray-600 text-lg"
+                    data-cn="精选时间管理工具、效率方法和专注技巧，帮助你提高学习效率和工作生产力"
+                    data-en="Selected time management tools, efficiency methods and focus techniques to help you improve learning efficiency and work productivity"
+                    data-jp="時間管理ツール、効率的な方法、集中力向上テクニックを精選し、学習効率と仕事の生産性を向上させます">
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- 时间管理工具 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-clock-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4"
+                        data-cn="时间管理工具" data-en="Time Management Tools" data-jp="時間管理ツール">
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-calendar text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Todoist" data-en="Todoist" data-jp="Todoist"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="跨平台任务管理工具，支持项目分类、优先级设置和提醒功能"
+                                    data-en="Cross-platform task management tool with project categorization, priority setting and reminder functions"
+                                    data-jp="クロスプラットフォームのタスク管理ツールで、プロジェクト分類、優先度設定、リマインダー機能をサポートしています">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-tasks text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Notion" data-en="Notion" data-jp="Notion"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="多功能工作空间，可用于任务管理、笔记和知识库构建"
+                                    data-en="Multi-functional workspace for task management, note-taking and knowledge base building"
+                                    data-jp="タスク管理、ノート作成、知識ベース構築に使用できる多機能ワークスペース">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-pomodoro text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Forest" data-en="Forest" data-jp="Forest"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="专注时间管理应用，通过种树游戏化方式减少手机干扰"
+                                    data-en="Focus time management app that reduces phone distractions through tree-planting gamification"
+                                    data-jp="木を植えるゲーム化方式を通じて携帯電話の干渉を減らす、集中時間管理アプリ">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-line-chart text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Toggl Track" data-en="Toggl Track" data-jp="Toggl Track"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="时间跟踪工具，分析时间分配，优化工作流程"
+                                    data-en="Time tracking tool to analyze time allocation and optimize workflow"
+                                    data-jp="時間配分を分析し、ワークフローを最適化するタイムトラッキングツール">
+								</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 笔记与知识管理系统 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-sticky-note text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4"
+                        data-cn="笔记与知识管理系统" data-en="Note-taking & Knowledge Management" data-jp="メモと知識管理システム">
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-book text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Obsidian" data-en="Obsidian" data-jp="Obsidian"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="基于双向链接的笔记工具，构建个人知识网络，支持Markdown语法"
+                                    data-en="Note-taking tool based on bidirectional links to build personal knowledge networks, supporting Markdown"
+                                    data-jp="双方向リンクに基づくメモツールで、個人の知識ネットワークを構築し、Markdown構文をサポートしています">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-cloud text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Notion" data-en="Notion" data-jp="Notion"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="多功能协作平台，支持表格、数据库、看板等多种视图，整合笔记与任务"
+                                    data-en="Multi-functional collaboration platform supporting tables, databases, kanban views, integrating notes and tasks"
+                                    data-jp="テーブル、データベース、カンバンビューなど多様なビューをサポートする多機能コラボレーションプラットフォームで、メモとタスクを統合">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-pencil text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="OneNote" data-en="OneNote" data-jp="OneNote"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="微软生态笔记工具，支持自由手绘、分区管理，适合课堂与会议记录"
+                                    data-en="Microsoft ecosystem note-taking tool supporting freehand drawing and section management, ideal for class and meeting notes"
+                                    data-jp="マイクロソフトエコシステムのメモツールで、フリーハンド描画とセクション管理をサポートし、授業や会議のメモに最適">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-primary">
+                                <i class="fa fa-share-alt text-xl mt-1"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-1" data-cn="Roam Research" data-en="Roam Research" data-jp="Roam Research"></h4>
+                                <p class="text-gray-600 text-sm"
+                                    data-cn="非线性笔记工具，侧重知识关联与网状结构，适合深度思考与研究"
+                                    data-en="Non-linear note-taking tool focusing on knowledge connections and network structures, ideal for deep thinking and research"
+                                    data-jp="知識の関連性とネットワーク構造に焦点を当てた非線形メモツールで、深い思考と研究に最適">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 专注与效率方法 -->
+            <div class="mt-12 max-w-4xl mx-auto bg-softGreen rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6"
+                    data-cn="专注与效率提升方法" data-en="Focus & Productivity Improvement Methods" data-jp="集中力と生産性向上方法">
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 时间管理方法 -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 flex items-center"
+                            data-cn="时间管理方法" data-en="Time Management Methods" data-jp="時間管理方法">
+                            <i class="fa fa-clock-o text-primary mr-2"></i>
+                        </h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mr-3 mt-0.5 flex-shrink-0">1</div>
+                                <div>
+                                    <span class="font-medium" data-cn="番茄工作法（Pomodoro）：" data-en="Pomodoro Technique: " data-jp="ポモドーロテクニック："></span>
+                                    <span data-cn="25分钟专注+5分钟休息，提高单位时间效率" data-en="25 minutes of focus + 5 minutes of rest to improve per-unit time efficiency" data-jp="25分間集中＋5分間休息で、単位時間の効率を向上"></span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mr-3 mt-0.5 flex-shrink-0">2</div>
+                                <div>
+                                    <span class="font-medium" data-cn="艾森豪威尔矩阵：" data-en="Eisenhower Matrix: " data-jp="アイゼンハワーマトリックス："></span>
+                                    <span data-cn="按紧急/重要程度分类任务，优先处理核心事项" data-en="Classify tasks by urgency/importance, prioritize core matters" data-jp="緊急性/重要度に基づいてタスクを分類し、核心事項を優先的に処理"></span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mr-3 mt-0.5 flex-shrink-0">3</div>
+                                <div>
+                                    <span class="font-medium" data-cn="时间块管理：" data-en="Time Blocking: " data-jp="時間ブロック管理："></span>
+                                    <span data-cn="将一天划分为固定时间块，分配特定任务类型" data-en="Divide the day into fixed time blocks and assign specific task types" data-jp="1日を固定した時間ブロックに分割し、特定のタスクタイプを割り当て"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 专注提升技巧 -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 flex items-center"
+                            data-cn="专注提升技巧" data-en="Focus Improvement Techniques" data-jp="集中力向上テクニック">
+                            <i class="fa fa-bullseye text-primary mr-2"></i>
+                        </h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mr-3 mt-0.5 flex-shrink-0">1</div>
+                                <div>
+                                    <span class="font-medium" data-cn="环境优化：" data-en="Environment Optimization: " data-jp="環境最適化："></span>
+                                    <span data-cn="减少干扰源（关闭通知、整洁桌面），创建专注空间" data-en="Reduce distractions (turn off notifications, tidy desktop) to create a focus space" data-jp="干渉源を減らす（通知をオフ、デスクトップを整理）し、集中空間を作成"></span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mr-3 mt-0.5 flex-shrink-0">2</div>
+                                <div>
+                                    <span class="font-medium" data-cn="任务拆解：" data-en="Task Decomposition: " data-jp="タスク分解："></span>
+                                    <span data-cn="将复杂任务拆分为小步骤，降低执行门槛" data-en="Break complex tasks into small steps to lower the execution threshold" data-jp="複雑なタスクを小さなステップに分解し、実行のハードルを下げ"></span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mr-3 mt-0.5 flex-shrink-0">3</div>
+                                <div>
+                                    <span class="font-medium" data-cn="专注音乐：" data-en="Focus Music: " data-jp="集中音楽："></span>
+                                    <span data-cn="使用白噪音、古典音乐或Lo-Fi，屏蔽环境杂音" data-en="Use white noise, classical music or Lo-Fi to block environmental noise" data-jp="ホワイトノイズ、クラシック音楽、Lo-Fiを使用して環境騒音を遮断"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 效率工具对比表 -->
+            <div class="mt-12 max-w-6xl mx-auto overflow-x-auto">
+                <h3 class="text-xl font-bold mb-6 text-center"
+                    data-cn="常用效率工具对比" data-en="Common Productivity Tool Comparison" data-jp="一般的な生産性ツール比較">
+                </h3>
+                <table class="w-full min-w-max bg-white rounded-xl shadow-lg overflow-hidden">
+                    <thead class="bg-gray-50 text-gray-700">
+                        <tr>
+                            <th class="py-4 px-6 text-left text-sm font-semibold"
+                                data-cn="工具名称" data-en="Tool Name" data-jp="ツール名">
+                            </th>
+                            <th class="py-4 px-6 text-left text-sm font-semibold"
+                                data-cn="核心功能" data-en="Core Functions" data-jp="核心機能">
+                            </th>
+                            <th class="py-4 px-6 text-left text-sm font-semibold"
+                                data-cn="适用场景" data-en="Applicable Scenarios" data-jp="適用シナリオ">
+                            </th>
+                            <th class="py-4 px-6 text-left text-sm font-semibold"
+                                data-cn="平台支持" data-en="Platform Support" data-jp="プラットフォームサポート">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6 font-medium" data-cn="Todoist" data-en="Todoist" data-jp="Todoist"></td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="任务管理、优先级设置、提醒、项目分类"
+                                data-en="Task management, priority setting, reminders, project categorization"
+                                data-jp="タスク管理、優先度設定、リマインダー、プロジェクト分類">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="日常任务跟踪、多项目管理"
+                                data-en="Daily task tracking, multi-project management"
+                                data-jp="日常タスク追跡、マルチプロジェクト管理">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="Web、Windows、Mac、iOS、Android"
+                                data-en="Web, Windows, Mac, iOS, Android"
+                                data-jp="Web、Windows、Mac、iOS、Android">
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6 font-medium" data-cn="Obsidian" data-en="Obsidian" data-jp="Obsidian"></td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="双向链接、Markdown、本地存储、插件扩展"
+                                data-en="Bidirectional links, Markdown, local storage, plugin extensions"
+                                data-jp="双方向リンク、Markdown、ローカルストレージ、プラグイン拡張">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="知识整理、深度思考、研究笔记"
+                                data-en="Knowledge organization, deep thinking, research notes"
+                                data-jp="知識整理、深い思考、研究メモ">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="Windows、Mac、Linux、iOS、Android"
+                                data-en="Windows, Mac, Linux, iOS, Android"
+                                data-jp="Windows、Mac、Linux、iOS、Android">
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6 font-medium" data-cn="Forest" data-en="Forest" data-jp="Forest"></td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="专注计时、手机戒断、游戏化激励"
+                                data-en="Focus timing, phone withdrawal, gamified incentives"
+                                data-jp="集中タイミング、スマホ離れ、ゲーム化インセンティブ">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="学习专注、工作效率提升、减少手机依赖"
+                                data-en="Study focus, work efficiency improvement, reducing phone dependence"
+                                data-jp="学習集中、仕事効率向上、スマホ依存低減">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="iOS、Android、Chrome插件"
+                                data-en="iOS, Android, Chrome Extension"
+                                data-jp="iOS、Android、Chrome拡張機能">
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6 font-medium" data-cn="Toggl Track" data-en="Toggl Track" data-jp="Toggl Track"></td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="时间跟踪、效率分析、团队协作"
+                                data-en="Time tracking, efficiency analysis, team collaboration"
+                                data-jp="時間追跡、効率分析、チームコラボレーション">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="工作时间统计、项目工时核算、效率优化"
+                                data-en="Work time statistics, project hour accounting, efficiency optimization"
+                                data-jp="仕事時間統計、プロジェクト工数計算、効率最適化">
+                            </td>
+                            <td class="py-4 px-6 text-gray-600 text-sm"
+                                data-cn="Web、Windows、Mac、iOS、Android"
+                                data-en="Web, Windows, Mac, iOS, Android"
+                                data-jp="Web、Windows、Mac、iOS、Android">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

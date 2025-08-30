@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 在线学习资源" data-cn="Jeffery Hu | 在线学习资源" data-en="Jeffery Hu | Online Learning Resources" data-jp="Jeffery Hu | オンライン学習リソース">
+    <meta property="og:description" content="优质在线课程与学习平台推荐" data-cn="优质在线课程与学习平台推荐" data-en="Recommended online courses and learning platforms" data-jp="推奨されるオンラインコースと学習プラットフォーム">
+    <meta property="og:url" content="https://resource.huyang3780.top/study-online.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 在线学习资源" data-en="Jeffery Hu | Online Learning Resources" data-jp="Jeffery Hu | オンライン学習リソース"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100 text-primary" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="在线教育" data-en="Online Education" data-jp="オンライン教育">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="优质在线学习资源" data-en="Quality Online Learning Resources" data-jp="高品質オンライン学習リソース">
+                </h2>
+                <p class="text-gray-600 text-lg"
+                    data-cn="精选全球知名在线学习平台与优质课程，帮助你随时随地拓展知识边界"
+                    data-en="Selected world-renowned online learning platforms and quality courses to help you expand your knowledge anytime, anywhere"
+                    data-jp="世界的に有名なオンライン学習プラットフォームと高品質コースを精選し、いつでもどこでも知識の境界を広げるのに役立ちます">
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Coursera -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover h-full flex flex-col">
+                    <div class="h-48 bg-softBlue flex items-center justify-center p-6">
+                        <i class="fa fa-graduation-cap text-6xl text-primary/70"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-3" data-cn="Coursera" data-en="Coursera" data-jp="Coursera"></h3>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="与全球顶尖大学合作的在线教育平台，提供专业证书和学位课程"
+                            data-en="Online education platform partnered with top universities worldwide, offering professional certificates and degree programs"
+                            data-jp="世界中のトップ大学と提携するオンライン教育プラットフォームで、専門的な証明書と学位プログラムを提供しています">
+                        <div class="space-y-2 mb-5">
+                            <div class="flex items-center text-sm">
+                                <span class="w-24 text-gray-500" data-cn="特色：" data-en="Features:" data-jp="特徴："></span>
+                                <span class="text-gray-600" data-cn="大学认证证书" data-en="University-certified certificates" data-jp="大学認定証明書"></span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="w-24 text-gray-500" data-cn="适合：" data-en="Suitable for:" data-jp="適した："></span>
+                                <span class="text-gray-600" data-cn="系统学习专业知识" data-en="Systematic study of professional knowledge" data-jp="専門知識の体系的な学習"></span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs" data-cn="计算机科学" data-en="Computer Science" data-jp="コンピュータ科学"></span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs" data-cn="商业管理" data-en="Business Management" data-jp="ビジネスマネジメント"></span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs" data-cn="数据科学" data-en="Data Science" data-jp="データサイエンス"></span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="https://www.coursera.org" target="_blank" class="block w-full py-2 text-center bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                            data-cn="访问平台" data-en="Visit Platform" data-jp="プラットフォームを訪問">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- edX -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover h-full flex flex-col">
+                    <div class="h-48 bg-softGreen flex items-center justify-center p-6">
+                        <i class="fa fa-university text-6xl text-secondary/70"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-3" data-cn="edX" data-en="edX" data-jp="edX"></h3>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="由哈佛和MIT创立的开源在线学习平台，提供高质量大学课程"
+                            data-en="Open-source online learning platform founded by Harvard and MIT, offering high-quality university courses"
+                            data-jp="ハーバード大学とMITによって設立されたオープンソースのオンライン学習プラットフォームで、高品質の大学コースを提供しています">
+                        <div class="space-y-2 mb-5">
+                            <div class="flex items-center text-sm">
+                                <span class="w-24 text-gray-500" data-cn="特色：" data-en="Features:" data-jp="特徴："></span>
+                                <span class="text-gray-600" data-cn="免费课程可选" data-en="Free courses available" data-jp="無料コースが選択可能"></span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="w-24 text-gray-500" data-cn="适合：" data-en="Suitable for:" data-jp="適した："></span>
+                                <span class="text-gray-600" data-cn="学术性学习需求" data-en="Academic learning needs" data-jp="学術的な学習ニーズ"></span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs" data-cn="工程学" data-en="Engineering" data-jp="工学"></span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs" data-cn="计算机" data-en="Computer Science" data-jp="コンピュータ"></span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs" data-cn="人文社科" data-en="Humanities" data-jp="人文社会科学"></span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="https://www.edx.org" target="_blank" class="block w-full py-2 text-center bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors"
+                            data-cn="访问平台" data-en="Visit Platform" data-jp="プラットフォームを訪問">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Udemy -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover h-full flex flex-col">
+                    <div class="h-48 bg-softPink flex items-center justify-center p-6">
+                        <i class="fa fa-play-circle text-6xl text-accent/70"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-3" data-cn="Udemy" data-en="Udemy" data-jp="Udemy"></h3>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="拥有海量实用技能课程的在线学习平台，适合快速掌握特定技能"
+                            data-en="Online learning platform with massive practical skill courses, suitable for quickly mastering specific skills"
+                            data-jp="膨大な実践的なスキルコースを持つオンライン学習プラットフォームで、特定のスキルをすばやく習得するのに適しています">
+                        <div class="space-y-2 mb-5">
+                            <div class="flex items-center text-sm">
+                                <span class="w-24 text-gray-500" data-cn="特色：" data-en="Features:" data-jp="特徴："></span>
+                                <span class="text-gray-600" data-cn="技能导向，价格亲民" data-en="Skill-oriented, affordable prices" data-jp="スキル志向、価格が手頃"></span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <span class="w-24 text-gray-500" data-cn="适合：" data-en="Suitable for:" data-jp="適した："></span>
+                                <span class="text-gray-600" data-cn="快速掌握实用技能" data-en="Quickly master practical skills" data-jp="実践的なスキルをすばやく習得"></span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs" data-cn="编程开发" data-en="Programming" data-jp="プログラミング開発"></span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs" data-cn="设计创意" data-en="Design & Creativity" data-jp="デザインと創造性"></span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs" data-cn="职业发展" data-en="Career Development" data-jp="キャリア開発"></span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="https://www.udemy.com" target="_blank" class="block w-full py-2 text-center bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors"
+                            data-cn="访问平台" data-en="Visit Platform" data-jp="プラットフォームを訪問">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-8 text-center"
+                    data-cn="其他优质在线学习资源" data-en="Other Quality Online Learning Resources" data-jp="その他の高品質オンライン学習リソース">
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <!-- Khan Academy -->
+                    <div class="bg-white rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="font-bold" data-cn="可汗学院" data-en="Khan Academy" data-jp="カーンアカデミー"></h4>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3"
+                            data-cn="免费的K-12到大学阶段课程，数学和科学领域尤为出色"
+                            data-en="Free K-12 to university level courses, excellent in math and science"
+                            data-jp="無料のK-12から大学レベルのコースで、数学と科学の分野に特に優れています">
+                        </p>
+                        <a href="https://www.khanacademy.org" target="_blank" class="text-primary text-sm inline-flex items-center"
+                            data-cn="了解更多 <i class='fa fa-external-link ml-1'></i>"
+                            data-en="Learn more <i class='fa fa-external-link ml-1'></i>"
+                            data-jp="詳細を見る <i class='fa fa-external-link ml-1'></i>">
+                        </a>
+                    </div>
+
+                    <!-- MIT OpenCourseWare -->
+                    <div class="bg-white rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                                <i class="fa fa-university"></i>
+                            </div>
+                            <h4 class="font-bold" data-cn="MIT开放课程" data-en="MIT OpenCourseWare" data-jp="MITオープンコースウェア"></h4>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3"
+                            data-cn="麻省理工学院免费开放的课程材料，包含视频和讲义"
+                            data-en="Free open course materials from MIT, including videos and lecture notes"
+                            data-jp="マサチューセッツ工科大学の無料公開コース資料で、動画と講義ノートを含みます">
+                        </p>
+                        <a href="https://ocw.mit.edu" target="_blank" class="text-primary text-sm inline-flex items-center"
+                            data-cn="了解更多 <i class='fa fa-external-link ml-1'></i>"
+                            data-en="Learn more <i class='fa fa-external-link ml-1'></i>"
+                            data-jp="詳細を見る <i class='fa fa-external-link ml-1'></i>">
+                        </a>
+                    </div>
+
+                    <!-- 中国大学MOOC -->
+                    <div class="bg-white rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="font-bold" data-cn="中国大学MOOC" data-en="Chinese University MOOC" data-jp="中国大学MOOC"></h4>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3"
+                            data-cn="国内顶尖大学提供的在线课程，适合系统学习大学课程"
+                            data-en="Online courses from top Chinese universities, suitable for systematic study"
+                            data-jp="中国のトップ大学が提供するオンラインコースで、大学コースを体系的に学ぶのに適しています">
+                        </p>
+                        <a href="https://www.icourse163.org" target="_blank" class="text-primary text-sm inline-flex items-center"
+                            data-cn="了解更多 <i class='fa fa-external-link ml-1'></i>"
+                            data-en="Learn more <i class='fa fa-external-link ml-1'></i>"
+                            data-jp="詳細を見る <i class='fa fa-external-link ml-1'></i>">
+                        </a>
+                    </div>
+
+                    <!-- Pluralsight -->
+                    <div class="bg-white rounded-xl p-5 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            <h4 class="font-bold" data-cn="Pluralsight" data-en="Pluralsight" data-jp="Pluralsight"></h4>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3"
+                            data-cn="专注于技术技能的在线学习平台，适合IT专业人士提升"
+                            data-en="Online learning platform focused on technical skills, suitable for IT professionals"
+                            data-jp="技術スキルに特化したオンライン学習プラットフォームで、IT専門家のスキルアップに適しています">
+                        </p>
+                        <a href="https://www.pluralsight.com" target="_blank" class="text-primary text-sm inline-flex items-center"
+                            data-cn="了解更多 <i class='fa fa-external-link ml-1'></i>"
+                            data-en="Learn more <i class='fa fa-external-link ml-1'></i>"
+                            data-jp="詳細を見る <i class='fa fa-external-link ml-1'></i>">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 开发与编程工具" data-cn="Jeffery Hu | 开发与编程工具" data-en="Jeffery Hu | Development Tools" data-jp="Jeffery Hu | 開発ツール">
+    <meta property="og:description" content="精选开发与编程工具推荐" data-cn="精选开发与编程工具推荐" data-en="Recommended development and programming tools" data-jp="推奨される開発とプログラミングツール">
+    <meta property="og:url" content="https://resource.huyang3780.top/program-tools.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 开发与编程工具" data-en="Jeffery Hu | Development & Programming Tools" data-jp="Jeffery Hu | 開発とプログラミングツール"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+    <style>
+        .content-card {
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+        .resource-btn {
+            transition: all 0.2s ease;
+        }
+        .resource-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        .section-divider {
+            height: 3px;
+            width: 60px;
+            margin: 1rem 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100 text-primary" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="工具推荐" data-en="Tool Recommendations" data-jp="ツール推奨">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="开发与编程工具" data-en="Development and Programming Tools" data-jp="開発とプログラミングツール">
+                </h2>
+                <p class="text-gray-600 text-lg"
+                    data-cn="精选提高开发效率的编程工具、配置方案和实用插件，帮助开发者提升工作流"
+                    data-en="Selected programming tools, configuration schemes and useful plugins to improve development efficiency and workflow"
+                    data-jp="開発効率を向上させるプログラミングツール、設定スキーム、実用的なプラグインを精選し、開発者のワークフローを向上させます">
+                </p>
+            </div>
+
+            <!-- VS Code 高效配置 -->
+            <div class="content-card bg-softBlue rounded-2xl p-8 mb-12 max-w-5xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                        <i class="fa fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="VS Code 高效配置" data-en="VS Code Efficient Configuration" data-jp="VS Code の効率的な設定">
+                    </h3>
+                </div>
+                <div class="section-divider bg-primary"></div>
+
+                <!-- 必备插件 -->
+                <div class="mb-10">
+                    <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                        data-cn="必备插件" data-en="Essential Plugins" data-jp="必須プラグイン"></h4>
+                    
+                    <div class="space-y-6 pl-4 border-l-2 border-primary/30">
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="ESLint + Prettier（代码格式化）" data-en="ESLint + Prettier (code formatting)" data-jp="ESLint + Prettier（コードフォーマット）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="这对组合能够自动检测代码错误并统一代码风格，支持多种编程语言，可通过配置文件自定义格式化规则，是团队协作的必备工具。"
+                                data-en="This combination automatically detects code errors and unifies code styles, supports multiple programming languages, and allows custom formatting rules through configuration files, making it an essential tool for team collaboration."
+                                data-jp="このコンビネーションはコードエラーを自動的に検出し、コードスタイルを統一し、複数のプログラミング言語をサポートし、設定ファイルを通じてフォーマットルールをカスタマイズでき、チームコラボレーションの必須ツールです。"></p>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="ESLint 插件" data-en="ESLint Plugin" data-jp="ESLint プラグイン"></span>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium ml-3">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="Prettier 插件" data-en="Prettier Plugin" data-jp="Prettier プラグイン"></span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="GitLens（Git集成增强）" data-en="GitLens (Git integration enhancement)" data-jp="GitLens（Git統合強化）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="增强VS Code的Git功能，显示代码作者、提交历史和分支比较，支持行内注释和历史查看，帮助开发者更好地理解代码演变过程。"
+                                data-en="Enhances VS Code's Git functionality by showing code authors, commit history, and branch comparisons, supporting inline comments and history viewing to help developers better understand code evolution."
+                                data-jp="VS CodeのGit機能を強化し、コード作成者、コミット履歴、ブランチ比較を表示し、インラインコメントと履歴表示をサポートし、開発者がコードの進化過程をよりよく理解するのに役立ちます。"></p>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="访问插件" data-en="Visit Plugin" data-jp="プラグインを訪問"></span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="Remote - SSH（远程开发）" data-en="Remote - SSH (remote development)" data-jp="Remote - SSH（リモート開発）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="允许直接在VS Code中连接远程服务器进行开发，无需在本地复制代码，支持所有本地开发功能，特别适合云服务器或虚拟机开发场景。"
+                                data-en="Allows direct connection to remote servers for development in VS Code without copying code locally, supporting all local development features, especially suitable for cloud server or virtual machine development scenarios."
+                                data-jp="VS Code内でリモートサーバーに直接接続して開発を行うことができ、ローカルにコードをコピーする必要がなく、すべてのローカル開発機能をサポートし、クラウドサーバーや仮想マシンの開発シナリオに特に適しています。"></p>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="访问插件" data-en="Visit Plugin" data-jp="プラグインを訪問"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 效率配置 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                        data-cn="效率配置" data-en="Efficiency Configuration" data-jp="効率設定"></h4>
+                    
+                    <div class="space-y-6 pl-4 border-l-2 border-primary/30">
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="快捷键自定义与vim模式" data-en="Keyboard shortcut customization & vim mode" data-jp="キーボードショートカットのカスタマイズとvimモード"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="通过自定义快捷键和启用Vim模式，可以显著提高编辑速度。Vim模式提供丰富的文本操作命令，配合VS Code的图形界面，兼顾效率与易用性。"
+                                data-en="Editing speed can be significantly improved by customizing keyboard shortcuts and enabling Vim mode. Vim mode provides rich text manipulation commands, combined with VS Code's graphical interface, balancing efficiency and ease of use."
+                                data-jp="キーボードショートカットをカスタマイズしてVimモードを有効にすることで、編集速度を大幅に向上させることができます。Vimモードは豊富なテキスト操作コマンドを提供し、VS Codeのグラフィカルインターフェースと組み合わせて、効率と使いやすさを両立させます。"></p>
+                            <a href="https://code.visualstudio.com/docs/getstarted/keybindings" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="快捷键配置指南" data-en="Shortcut Configuration Guide" data-jp="ショートカット設定ガイド"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Git 版本控制技巧 -->
+            <div class="content-card bg-softGreen rounded-2xl p-8 mb-12 max-w-5xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mr-4">
+                        <i class="fa fa-git text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="Git 版本控制技巧" data-en="Git Version Control Tips" data-jp="Git のバージョン管理のコツ">
+                    </h3>
+                </div>
+                <div class="section-divider bg-secondary"></div>
+
+                <!-- 常用命令 -->
+                <div class="mb-10">
+                    <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                        data-cn="常用命令" data-en="Common Commands" data-jp="一般的なコマンド"></h4>
+                    
+                    <div class="space-y-6 pl-4 border-l-2 border-secondary/30">
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="交互式rebase与commit规范" data-en="Interactive rebase & commit conventions" data-jp="対話型rebaseとコミット規約"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="交互式rebase允许修改历史提交，合并冗余提交，使提交历史更清晰。遵循Conventional Commits规范（如feat: 新功能, fix: 修复bug）可提高项目可维护性。"
+                                data-en="Interactive rebase allows modifying historical commits and merging redundant commits to make the commit history clearer. Following Conventional Commits conventions (e.g., feat: new feature, fix: bug fix) improves project maintainability."
+                                data-jp="対話型rebaseを使用すると、履歴コミットを変更したり、冗長なコミットをマージしたりして、コミット履歴をより明確にすることができます。Conventional Commits規約（feat: 新機能、fix: バグ修正など）に従うと、プロジェクトの保守性が向上します。"></p>
+                            <a href="https://git-scm.com/docs/git-rebase" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="Git Rebase 文档" data-en="Git Rebase Docs" data-jp="Git Rebase ドキュメント"></span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="分支管理策略（Git Flow）" data-en="Branch management strategy (Git Flow)" data-jp="ブランチ管理戦略（Git Flow）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="Git Flow是一种流行的分支管理模型，通过master（生产）、develop（开发）、feature（功能）、release（发布）和hotfix（紧急修复）分支分离，实现规范化开发流程。"
+                                data-en="Git Flow is a popular branch management model that standardizes the development process through separation of master (production), develop (development), feature (function), release (release), and hotfix (emergency fix) branches."
+                                data-jp="Git Flowは人気のブランチ管理モデルで、master（製品）、develop（開発）、feature（機能）、release（リリース）、hotfix（緊急修正）のブランチを分離することで、開発プロセスを標準化します。"></p>
+                            <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="Git Flow 指南" data-en="Git Flow Guide" data-jp="Git Flow ガイド"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 可视化工具 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                        data-cn="可视化工具" data-en="Visual Tools" data-jp="視覚化ツール"></h4>
+                    
+                    <div class="space-y-6 pl-4 border-l-2 border-secondary/30">
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="GitKraken（跨平台GUI）" data-en="GitKraken (cross-platform GUI)" data-jp="GitKraken（クロスプラットフォームGUI）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="GitKraken提供直观的图形界面，支持拖放操作管理分支，可视化提交历史和合并冲突，内置GitHub、GitLab集成，适合Git初学者和复杂项目管理。"
+                                data-en="GitKraken provides an intuitive graphical interface, supports drag-and-drop branch management, visualizes commit history and merge conflicts, and has built-in GitHub and GitLab integration, suitable for Git beginners and complex project management."
+                                data-jp="GitKrakenは直感的なグラフィカルインターフェースを提供し、ドラッグアンドドロップでブランチを管理し、コミット履歴とマージコンフリクトを可視化し、GitHubやGitLabの統合が組み込まれており、Git初心者や複雑なプロジェクト管理に適しています。"></p>
+                            <a href="https://www.gitkraken.com/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数据库管理工具 -->
+            <div class="content-card bg-softLavender rounded-2xl p-8 mb-12 max-w-5xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-4">
+                        <i class="fa fa-database text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="数据库管理工具" data-en="Database Management Tools" data-jp="データベース管理ツール">
+                    </h3>
+                </div>
+                <div class="section-divider bg-accent"></div>
+
+                <!-- 关系型数据库 -->
+                <div class="mb-10">
+                    <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                        data-cn="关系型数据库" data-en="Relational Databases" data-jp="リレーショナルデータベース"></h4>
+                    
+                    <div class="space-y-6 pl-4 border-l-2 border-accent/30">
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="DBeaver（多数据库支持）" data-en="DBeaver (multi-database support)" data-jp="DBeaver（複数データベースサポート）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="DBeaver是一款开源的通用数据库工具，支持MySQL、PostgreSQL、Oracle等多种数据库，提供SQL编辑、数据导入导出、ER图可视化等功能，适合多数据库环境开发。"
+                                data-en="DBeaver is an open-source universal database tool that supports multiple databases such as MySQL, PostgreSQL, and Oracle. It provides SQL editing, data import/export, ER diagram visualization, and is suitable for multi-database environment development."
+                                data-jp="DBeaverはオープンソースの汎用データベースツールで、MySQL、PostgreSQL、Oracleなど複数のデータベースをサポートし、SQL編集、データのインポート/エクスポート、ER図の可視化などの機能を提供し、複数のデータベース環境の開発に適しています。"></p>
+                            <a href="https://dbeaver.io/" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NoSQL与可视化 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-dark/80"
+                        data-cn="NoSQL与可视化" data-en="NoSQL & Visualization" data-jp="NoSQLと可視化"></h4>
+                    
+                    <div class="space-y-6 pl-4 border-l-2 border-accent/30">
+                        <div>
+                            <h5 class="font-medium text-lg mb-2"
+                                data-cn="MongoDB Compass（文档数据库）" data-en="MongoDB Compass (document database)" data-jp="MongoDB Compass（ドキュメントデータベース）"></h5>
+                            <p class="text-gray-600 mb-3"
+                                data-cn="MongoDB官方可视化工具，支持数据查询、索引管理、性能分析和Schema可视化，提供直观的界面操作NoSQL数据库，无需记忆复杂命令。"
+                                data-en="MongoDB's official visualization tool supports data querying, index management, performance analysis, and Schema visualization. It provides an intuitive interface to operate NoSQL databases without memorizing complex commands."
+                                data-jp="MongoDBの公式可視化ツールで、データクエリ、インデックス管理、パフォーマンス分析、スキーマ可視化をサポートし、直感的なインターフェースでNoSQLデータベースを操作でき、複雑なコマンドを記憶する必要がありません。"></p>
+                            <a href="https://www.mongodb.com/products/compass" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                                <i class="fa fa-external-link mr-2"></i>
+                                <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 开发环境配置 -->
+            <div class="content-card bg-softBeige rounded-2xl p-8 mb-12 max-w-5xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 mr-4">
+                        <i class="fa fa-cogs text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="开发环境配置" data-en="Development Environment Setup" data-jp="開発環境の設定">
+                    </h3>
+                </div>
+                <div class="section-divider bg-amber-500"></div>
+
+                <div class="space-y-8">
+                    <div class="pl-4 border-l-2 border-amber-500/30">
+                        <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                            data-cn="Docker容器化开发环境搭建" data-en="Docker containerized development environment setup" data-jp="Dockerコンテナ化された開発環境の構築"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="使用Docker可以创建隔离的开发环境，确保团队成员使用一致的依赖版本。通过Docker Compose可定义多容器应用（如前端、后端、数据库），一键启动完整开发环境。"
+                            data-en="Docker can be used to create isolated development environments, ensuring team members use consistent dependency versions. Docker Compose allows defining multi-container applications (e.g., frontend, backend, database) and starting a complete development environment with one click."
+                            data-jp="Dockerを使用すると、分離された開発環境を作成でき、チームメンバーが一貫した依存関係のバージョンを使用することを保証できます。Docker Composeを使用すると、複数のコンテナアプリケーション（フロントエンド、バックエンド、データベースなど）を定義し、一括で完全な開発環境を起動できます。"></p>
+                        <a href="https://docs.docker.com/compose/gettingstarted/" target="_blank" class="resource-btn inline-flex items-center bg-amber-500 text-white px-4 py-2 rounded-md font-medium">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="Docker Compose 教程" data-en="Docker Compose Tutorial" data-jp="Docker Compose チュートリアル"></span>
+                        </a>
+                    </div>
+
+                    <div class="pl-4 border-l-2 border-amber-500/30">
+                        <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                            data-cn="CI/CD自动化部署工具（GitHub Actions/Jenkins）" data-en="CI/CD automated deployment tools (GitHub Actions/Jenkins)" data-jp="CI/CD自動化デプロイメントツール（GitHub Actions/Jenkins）"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="GitHub Actions允许直接在GitHub仓库中定义CI/CD工作流，自动运行测试、构建和部署。Jenkins则提供更灵活的插件生态，适合复杂的自动化流程，支持多环境部署。"
+                            data-en="GitHub Actions allows defining CI/CD workflows directly in GitHub repositories to automatically run tests, builds, and deployments. Jenkins provides a more flexible plugin ecosystem, suitable for complex automation processes and supporting multi-environment deployment."
+                            data-jp="GitHub Actionsを使用すると、GitHubリポジトリ内で直接CI/CDワークフローを定義し、テスト、ビルド、デプロイを自動的に実行できます。Jenkinsはより柔軟なプラグインエコシステムを提供し、複雑な自動化プロセスに適しており、複数環境へのデプロイをサポートしています。"></p>
+                        <a href="https://docs.github.com/en/actions/learn-github-actions" target="_blank" class="resource-btn inline-flex items-center bg-amber-500 text-white px-4 py-2 rounded-md font-medium">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="GitHub Actions 指南" data-en="GitHub Actions Guide" data-jp="GitHub Actions ガイド"></span>
+                        </a>
+                        <a href="https://www.jenkins.io/doc/tutorials/" target="_blank" class="resource-btn inline-flex items-center bg-amber-500 text-white px-4 py-2 rounded-md font-medium ml-3">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="Jenkins 教程" data-en="Jenkins Tutorial" data-jp="Jenkins チュートリアル"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API开发与测试工具 -->
+            <div class="content-card bg-softPink rounded-2xl p-8 max-w-5xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-14 h-14 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-500 mr-4">
+                        <i class="fa fa-exchange text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="API开发与测试工具" data-en="API Development & Testing Tools" data-jp="API開発とテストツール">
+                    </h3>
+                </div>
+                <div class="section-divider bg-rose-500"></div>
+
+                <div class="space-y-8">
+                    <div class="pl-4 border-l-2 border-rose-500/30">
+                        <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                            data-cn="Postman（API测试与文档）" data-en="Postman (API testing & documentation)" data-jp="Postman（APIテストとドキュメント）"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="Postman是最流行的API测试工具，支持REST、GraphQL等多种API类型，可保存请求历史、创建测试集合、生成API文档，并支持团队协作分享测试用例。"
+                            data-en="Postman is the most popular API testing tool, supporting multiple API types such as REST and GraphQL. It can save request history, create test collections, generate API documentation, and support team collaboration to share test cases."
+                            data-jp="Postmanは最も人気のAPIテストツールで、REST、GraphQLなど複数のAPIタイプをサポートし、リクエスト履歴を保存し、テストコレクションを作成し、APIドキュメントを生成し、チームコラボレーションによるテストケースの共有をサポートします。"></p>
+                        <a href="https://www.postman.com/" target="_blank" class="resource-btn inline-flex items-center bg-rose-500 text-white px-4 py-2 rounded-md font-medium">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                        </a>
+                    </div>
+
+                    <div class="pl-4 border-l-2 border-rose-500/30">
+                        <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                            data-cn="Swagger（API设计与自动文档）" data-en="Swagger (API design & auto-documentation)" data-jp="Swagger（API設計と自動ドキュメント）"></h4>
+                        <p class="text-gray-600 mb-4"
+                            data-cn="Swagger（现OpenAPI）提供API设计规范和工具集，可自动生成交互式API文档，支持在线测试，便于前后端开发人员协作，确保接口理解一致。"
+                            data-en="Swagger (now OpenAPI) provides API design specifications and toolkits, which can automatically generate interactive API documentation, support online testing, facilitate collaboration between front-end and back-end developers, and ensure consistent interface understanding."
+                            data-jp="Swagger（現在はOpenAPI）はAPI設計仕様とツールキットを提供し、対話型APIドキュメントを自動生成し、オンラインテストをサポートし、フロントエンドとバックエンドの開発者間のコラボレーションを容易にし、インターフェースの理解を一致させることができます。"></p>
+                        <a href="https://swagger.io/" target="_blank" class="resource-btn inline-flex items-center bg-rose-500 text-white px-4 py-2 rounded-md font-medium">
+                            <i class="fa fa-external-link mr-2"></i>
+                            <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

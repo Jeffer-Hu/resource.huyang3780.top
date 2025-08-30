@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 研究工具资源" data-cn="Jeffery Hu | 研究工具资源" data-en="Jeffery Hu | Research Tools" data-jp="Jeffery Hu | 研究ツールリソース">
+    <meta property="og:description" content="学术研究与文献管理工具推荐" data-cn="学术研究与文献管理工具推荐" data-en="Academic research and literature management tools" data-jp="学術研究と文献管理ツールの推奨">
+    <meta property="og:url" content="https://resource.huyang3780.top/research-tools.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 学术研究工具" data-en="Jeffery Hu | Academic Research Tools" data-jp="Jeffery Hu | 学術研究ツール"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+    <style>
+        .content-section {
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+        .content-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        .resource-btn {
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+        .resource-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        .section-divider {
+            height: 2px;
+            width: 60px;
+            margin: 1rem 0 2rem;
+            border-radius: 1px;
+        }
+        .sub-item {
+            margin-left: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid rgba(59, 130, 246, 0.2);
+            margin-bottom: 2.5rem;
+        }
+        .detail-text {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+				<a href="research-tools.html" class="link-underline" data-cn="研究工具" data-en="Research Tools" data-jp="研究ツール">研究工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+				<a href="research-tools.html" class="text-lg py-2 border-b border-gray-100 text-primary" data-cn="研究工具" data-en="Research Tools" data-jp="研究ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10 max-w-5xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="研究工具" data-en="Research Tools" data-jp="研究ツール">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="学术研究与文献管理工具" data-en="Academic Research & Literature Tools" data-jp="学術研究と文献管理ツール">
+                </h2>
+                <p class="text-gray-600 text-lg"
+                    data-cn="精选学术研究过程中实用的文献管理、数据分析和论文写作工具，提高研究效率"
+                    data-en="Selected practical tools for literature management, data analysis and paper writing in academic research to improve research efficiency"
+                    data-jp="学術研究における文献管理、データ分析、論文執筆に実用的なツールを精選し、研究効率を向上させます">
+                </p>
+            </div>
+
+            <!-- 文献管理工具 -->
+            <div class="content-section bg-softBlue">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                        <i class="fa fa-book text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="文献管理工具" data-en="Literature Management Tools" data-jp="文献管理ツール">
+                    </h3>
+                </div>
+                <div class="section-divider bg-primary"></div>
+
+                <!-- Zotero -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Zotero" data-en="Zotero" data-jp="Zotero"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Zotero是一款免费开源的文献管理工具，支持多平台同步（Windows、macOS、Linux及移动端），可自动抓取网页文献信息，生成引用格式。其强大的插件生态系统允许用户扩展功能，如与Word、LibreOffice集成插入引用，适合个人和团队协作管理文献库。"
+                        data-en="Zotero is a free and open-source literature management tool that supports multi-platform synchronization (Windows, macOS, Linux, and mobile). It can automatically capture web literature information and generate citation formats. Its powerful plugin ecosystem allows users to extend functions, such as integrating with Word and LibreOffice to insert citations, suitable for individuals and teams to manage literature libraries collaboratively."
+                        data-jp="Zoteroは無料のオープンソース文献管理ツールで、マルチプラットフォーム同期（Windows、macOS、Linux、モバイル端末）をサポートしています。ウェブ文献情報を自動的に取得し、引用フォーマットを生成できます。強力なプラグインエコシステムにより、WordやLibreOfficeと統合して引用を挿入するなどの機能を拡張でき、個人やチームの文献ライブラリ管理に適しています。">
+                    </p>
+                    <a href="https://www.zotero.org/" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <!-- Mendeley -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Mendeley" data-en="Mendeley" data-jp="Mendeley"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Mendeley是一款注重社交功能的文献管理工具，除基础的文献存储和引用生成功能外，还允许用户创建研究小组、分享文献资源、讨论学术问题。其内置的PDF阅读器支持标注和笔记功能，可自动提取文献元数据，适合需要与同行频繁交流的研究人员。"
+                        data-en="Mendeley is a literature management tool with a focus on social features. In addition to basic literature storage and citation generation functions, it allows users to create research groups, share literature resources, and discuss academic issues. Its built-in PDF reader supports annotation and note-taking functions, and can automatically extract literature metadata, suitable for researchers who need frequent communication with peers."
+                        data-jp="Mendeleyはソーシャル機能に重点を置いた文献管理ツールで、基本的な文献保管と引用生成機能に加え、研究グループの作成、文献リソースの共有、学術的な問題の議論を可能にします。内蔵のPDFリーダーは注釈とノート機能をサポートし、文献メタデータを自動的に抽出できるため、同僚と頻繁に交流する必要のある研究者に適しています。">
+                    </p>
+                    <a href="https://www.mendeley.com/" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <!-- EndNote -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="EndNote" data-en="EndNote" data-jp="EndNote"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="EndNote是功能全面的商业文献管理软件，被众多科研机构采用。它支持超过6000种引用格式，可与主流文字处理软件无缝集成，提供文献查重和全文检索功能。其高级版本还支持团队协作和云端同步，适合处理大规模文献库和复杂格式要求的学术出版物。"
+                        data-en="EndNote is a comprehensive commercial literature management software adopted by many research institutions. It supports more than 6000 citation formats, seamlessly integrates with mainstream word processing software, and provides literature duplicate checking and full-text retrieval functions. Its advanced version also supports team collaboration and cloud synchronization, suitable for handling large-scale literature libraries and academic publications with complex format requirements."
+                        data-jp="EndNoteは機能が充実した商用文献管理ソフトウェアで、多くの研究機関で採用されています。6000種類以上の引用フォーマットをサポートし、主流のワードプロセッシングソフトウェアとシームレスに統合でき、文献重複チェックと全文検索機能を提供します。高級バージョンではチームコラボレーションとクラウド同期もサポートし、大規模な文献ライブラリと複雑なフォーマット要求のある学術出版物の処理に適しています。">
+                    </p>
+                    <a href="https://endnote.com/" target="_blank" class="resource-btn inline-flex items-center bg-primary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 数据分析工具 -->
+            <div class="content-section bg-softGreen">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mr-4">
+                        <i class="fa fa-bar-chart text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="数据分析工具" data-en="Data Analysis Tools" data-jp="データ分析ツール">
+                    </h3>
+                </div>
+                <div class="section-divider bg-secondary"></div>
+
+                <!-- Python数据科学生态 -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Python数据科学生态" data-en="Python Data Science Ecosystem" data-jp="Pythonデータサイエンスエコシステム"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Python数据科学生态由Pandas（数据处理）、NumPy（数值计算）、Matplotlib（可视化）、Scikit-learn（机器学习）等库组成，形成灵活强大的数据分析工具链。研究者可通过Jupyter Notebook实现代码、文本和可视化结果的一体化展示，适合从数据清洗到建模分析的全流程研究工作。"
+                        data-en="The Python Data Science Ecosystem consists of libraries such as Pandas (data processing), NumPy (numerical computing), Matplotlib (visualization), and Scikit-learn (machine learning), forming a flexible and powerful data analysis toolchain. Researchers can use Jupyter Notebook to integrate code, text, and visualization results, suitable for the entire research process from data cleaning to modeling and analysis."
+                        data-jp="Pythonデータサイエンスエコシステムは、Pandas（データ処理）、NumPy（数値計算）、Matplotlib（可視化）、Scikit-learn（機械学習）などのライブラリで構成され、柔軟で強力なデータ分析ツールチェーンを形成しています。研究者はJupyter Notebookを使用して、コード、テキスト、可視化結果を統合して表示でき、データクリーニングからモデリング分析までの全流程の研究作業に適しています。">
+                    </p>
+                    <a href="https://pandas.pydata.org/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium mr-3">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="Pandas 官网" data-en="Pandas Official" data-jp="Pandas公式"></span>
+                    </a>
+                    <a href="https://jupyter.org/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="Jupyter 官网" data-en="Jupyter Official" data-jp="Jupyter公式"></span>
+                    </a>
+                </div>
+
+                <!-- R语言与RStudio -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="R语言与RStudio" data-en="R & RStudio" data-jp="R言語とRStudio"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="R语言是统计分析领域的标准工具，拥有超过18,000个CRAN包，涵盖从基础统计到高级建模的各类功能。RStudio作为其集成开发环境，提供代码自动补全、可视化面板和项目管理功能，支持Markdown文档生成，适合进行重复性分析和学术报告撰写。"
+                        data-en="R is a standard tool in the field of statistical analysis, with over 18,000 CRAN packages covering various functions from basic statistics to advanced modeling. RStudio, as its integrated development environment, provides code auto-completion, visualization panels, and project management functions, supports Markdown document generation, suitable for repetitive analysis and academic report writing."
+                        data-jp="R言語は統計分析分野の標準的なツールで、18,000を超えるCRANパッケージを持ち、基本統計から高度なモデリングまでの各種機能をカバーしています。RStudioはその統合開発環境として、コード自動補完、可視化パネル、プロジェクト管理機能を提供し、Markdown文書生成をサポートしており、反復的な分析と学術レポートの作成に適しています。">
+                    </p>
+                    <a href="https://www.r-project.org/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium mr-3">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="R 官网" data-en="R Official" data-jp="R公式"></span>
+                    </a>
+                    <a href="https://www.rstudio.com/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="RStudio 官网" data-en="RStudio Official" data-jp="RStudio公式"></span>
+                    </a>
+                </div>
+
+                <!-- Tableau -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Tableau" data-en="Tableau" data-jp="Tableau"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Tableau是一款直观的数据分析与可视化工具，无需编程即可通过拖放操作创建交互式数据仪表盘。它支持连接多种数据源（Excel、数据库、云服务等），提供丰富的图表类型和地图可视化功能，适合快速探索数据模式并向非技术人员展示研究结果。"
+                        data-en="Tableau is an intuitive data analysis and visualization tool that allows creating interactive data dashboards through drag-and-drop operations without programming. It supports connecting to multiple data sources (Excel, databases, cloud services, etc.), provides rich chart types and map visualization functions, suitable for quickly exploring data patterns and presenting research results to non-technical personnel."
+                        data-jp="Tableauは直感的なデータ分析と可視化ツールで、プログラミングなしでドラッグアンドドロップ操作によりインタラクティブなデータダッシュボードを作成できます。複数のデータソース（Excel、データベース、クラウドサービスなど）に接続することをサポートし、豊富なグラフタイプと地図可視化機能を提供しており、データパターンを迅速に探索し、非技術者に研究結果を提示するのに適しています。">
+                    </p>
+                    <a href="https://www.tableau.com/" target="_blank" class="resource-btn inline-flex items-center bg-secondary text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 论文写作工具 -->
+            <div class="content-section bg-softLavender">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-4">
+                        <i class="fa fa-pencil text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="论文写作工具" data-en="Paper Writing Tools" data-jp="論文執筆ツール">
+                    </h3>
+                </div>
+                <div class="section-divider bg-accent"></div>
+
+                <!-- LaTeX与Overleaf -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="LaTeX与Overleaf" data-en="LaTeX & Overleaf" data-jp="LaTeXとOverleaf"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="LaTeX是专业的排版系统，特别适合包含复杂公式、图表和参考文献的学术论文排版。Overleaf作为在线LaTeX编辑器，提供实时预览、模板库和团队协作功能，无需本地安装即可使用，支持与Zotero等文献管理工具集成，大幅简化论文写作流程。"
+                        data-en="LaTeX is a professional typesetting system, especially suitable for typesetting academic papers containing complex formulas, charts, and references. Overleaf, as an online LaTeX editor, provides real-time preview, template library, and team collaboration functions, which can be used without local installation, and supports integration with literature management tools such as Zotero, greatly simplifying the paper writing process."
+                        data-jp="LaTeXは専門的な排版システムで、特に複雑な数式、図表、参考文献を含む学術論文の排版に適しています。OverleafはオンラインLaTeXエディタとして、リアルタイムプレビュー、テンプレートライブラリ、チームコラボレーション機能を提供し、ローカルにインストールする必要がなく、Zoteroなどの文献管理ツールとの統合をサポートしており、論文執筆プロセスを大幅に簡素化します。">
+                    </p>
+                    <a href="https://www.latex-project.org/" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium mr-3">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="LaTeX 官网" data-en="LaTeX Official" data-jp="LaTeX公式"></span>
+                    </a>
+                    <a href="https://www.overleaf.com/" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="Overleaf 官网" data-en="Overleaf Official" data-jp="Overleaf公式"></span>
+                    </a>
+                </div>
+
+                <!-- Grammarly -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Grammarly" data-en="Grammarly" data-jp="Grammarly"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Grammarly是一款智能写作辅助工具，可检测英文语法错误、拼写问题和标点错误，同时提供风格建议和词汇优化推荐。其浏览器插件支持在Word、Gmail和Overleaf等平台使用，高级版还能检查学术写作中的查重和格式一致性，帮助非英语母语研究者提升论文语言质量。"
+                        data-en="Grammarly is an intelligent writing assistant tool that can detect English grammar errors, spelling problems, and punctuation errors, while providing style suggestions and vocabulary optimization recommendations. Its browser plugin supports use on platforms such as Word, Gmail, and Overleaf, and the premium version can also check for plagiarism and format consistency in academic writing, helping non-native English researchers improve the language quality of their papers."
+                        data-jp="Grammarlyはインテリジェントな文章作成支援ツールで、英語の文法エラー、スペルの問題、句読点の誤りを検出すると同時に、スタイルの提案と語彙の最適化推奨を提供します。そのブラウザプラグインはWord、Gmail、Overleafなどのプラットフォームでの使用をサポートし、プレミアム版では学術的な文章の剽窃とフォーマットの一貫性をチェックすることもでき、英語を母国語としない研究者の論文の言語品質を向上させるのに役立ちます。">
+                    </p>
+                    <a href="https://www.grammarly.com/" target="_blank" class="resource-btn inline-flex items-center bg-accent text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 文献检索工具 -->
+            <div class="content-section bg-softBeige">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-zhihu/10 flex items-center justify-center text-zhihu mr-4">
+                        <i class="fa fa-search text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold"
+                        data-cn="文献检索工具" data-en="Literature Search Tools" data-jp="文献検索ツール">
+                    </h3>
+                </div>
+                <div class="section-divider bg-zhihu"></div>
+
+                <!-- Google Scholar -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Google Scholar" data-en="Google Scholar" data-jp="Google Scholar"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Google Scholar是覆盖多学科的学术文献检索引擎，可查找论文、学位论文、书籍和会议论文。它提供文献引用次数统计和相关文献推荐功能，支持直接链接到全文（取决于机构权限），是快速定位研究领域关键文献的首选工具。"
+                        data-en="Google Scholar is a multidisciplinary academic literature search engine that can find papers, dissertations, books, and conference papers. It provides literature citation count statistics and related literature recommendation functions, supports direct links to full texts (depending on institutional permissions), and is the preferred tool for quickly locating key literature in research fields."
+                        data-jp="Google Scholarは多学科学術文献検索エンジンで、論文、学位論文、書籍、会議論文を検索できます。文献の引用回数統計と関連文献推薦機能を提供し、全文への直接リンクをサポートしています（機関の権限により異なります）。研究分野の重要な文献を迅速に特定するための首选ツールです。">
+                    </p>
+                    <a href="https://scholar.google.com/" target="_blank" class="resource-btn inline-flex items-center bg-zhihu text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+
+                <!-- Web of Science -->
+                <div class="sub-item">
+                    <h4 class="text-xl font-semibold mb-3 text-dark/80"
+                        data-cn="Web of Science" data-en="Web of Science" data-jp="Web of Science"></h4>
+                    <p class="text-gray-600 detail-text"
+                        data-cn="Web of Science是权威的引文索引数据库，涵盖自然科学、社会科学等多个领域的核心期刊。它提供强大的引文分析功能，可追踪研究主题的发展脉络和影响力，支持高级检索策略（如作者、机构、关键词组合），是学术评价和文献计量分析的重要工具。"
+                        data-en="Web of Science is an authoritative citation index database covering core journals in multiple fields such as natural sciences and social sciences. It provides powerful citation analysis functions, can track the development context and influence of research topics, supports advanced search strategies (such as author, institution, keyword combination), and is an important tool for academic evaluation and bibliometric analysis."
+                        data-jp="Web of Scienceは権威的な引用索引データベースで、自然科学、社会科学など複数の分野の核心学術誌をカバーしています。強力な引用分析機能を提供し、研究テーマの発展脈絡と影響力を追跡でき、高度な検索戦略（作者、機関、キーワードの組み合わせなど）をサポートしており、学術評価と文献計量分析の重要なツールです。">
+                    </p>
+                    <a href="https://www.webofscience.com/" target="_blank" class="resource-btn inline-flex items-center bg-zhihu text-white px-4 py-2 rounded-md font-medium">
+                        <i class="fa fa-external-link mr-2"></i>
+                        <span data-cn="访问官网" data-en="Visit Official Site" data-jp="公式サイトを訪問"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                    <a href="research-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="研究工具" data-en="Research Tools" data-jp="研究ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>

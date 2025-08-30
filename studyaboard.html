@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Jeffery Hu | 留学资源" data-cn="Jeffery Hu | 留学资源" data-en="Jeffery Hu | Study Abroad Resources" data-jp="Jeffery Hu | 留学リソース">
+    <meta property="og:description" content="日本与欧洲留学指南与资料" data-cn="日本与欧洲留学指南与资料" data-en="Japan and Europe study abroad guide and materials" data-jp="日本とヨーロッパの留学ガイドと資料">
+    <meta property="og:url" content="https://resource.huyang3780.top/studyaboard.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/icon.ico" type="image/x-icon">
+    
+    <title id="page-title" data-cn="Jeffery Hu | 日本与欧洲留学资源" data-en="Jeffery Hu | Japan & Europe Study Abroad" data-jp="Jeffery Hu | 日本とヨーロッパの留学リソース"></title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#EC4899',
+                        wechat: '#07C160',
+                        weibo: '#E6162D',
+                        zhihu: '#0F88EB',
+                        qq: '#12B7F5',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        softBlue: '#E1F5FE',
+                        softGreen: '#E8F5E9',
+                        softBeige: '#F5F5DC',
+                        softPink: '#FFEBEE',
+                        softGray: '#F5F7FA',
+                        softLavender: '#F3E5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+	<script src="src/lang.js"></script>
+    
+    <link rel="stylesheet" href="src/css.css">
+</head>
+<body class="index-bg-pattern text-dark overflow-x-hidden geometric-shapes">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="nav-decoration"></div>
+        
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://resource.huyang3780.top" class="text-2xl font-bold flex items-center group mr-6" id="page-logo">
+                    <span class="mr-2 text-primary group-hover:rotate-12 transition-transform duration-300" id="logo-icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span id="logo-text">Resources</span>
+                </a>
+  
+                <div class="hidden md:block">
+                    <select id="language-selector" class="bg-white border border-gray-300 text-dark rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+			
+			<nav class="hidden md:flex items-center space-x-6">
+				<a href="https://huyang3780.top" class="link-underline text-primary" 
+				   data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム">
+				   <i class="fa fa-home mr-1"></i>
+				</a>
+				<a href="main-resource.html" class="link-underline" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース">计算机资源</a>
+				<a href="study-resource.html" class="link-underline" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース">语言资源</a>
+				<a href="study-online.html" class="link-underline" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習">在线学习</a>
+				<a href="studyaboard.html" class="link-underline" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料">留学资料</a>
+				<a href="program-tools.html" class="link-underline" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール">开发工具</a>
+			</nav>
+        </div>
+        
+        <div class="md:hidden bg-white shadow-2xl absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobile-menu">
+			<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+				<div class="mb-1">
+					<select id="mobile-language-selector" class="w-full bg-white border border-gray-300 text-dark rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+						<option value="cn" selected>中文</option>
+						<option value="en">English</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+				<a href="https://huyang3780.top" class="text-lg py-2 border-b border-gray-100" data-cn="主站首页" data-en="Main Site Home" data-jp="メインサイトホーム"></a>
+				<a href="main-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+				<a href="study-resource.html" class="text-lg py-2 border-b border-gray-100" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+				<a href="study-online.html" class="text-lg py-2 border-b border-gray-100" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+				<a href="studyaboard.html" class="text-lg py-2 border-b border-gray-100" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+				<a href="program-tools.html" class="text-lg py-2 border-b border-gray-100" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+			</div>
+		</div>
+    </header>
+
+    <section class="min-h-screen pt-24 relative overflow-hidden">
+		<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+			<div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute bottom-20 right-40 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+		</div>
+		
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                    data-cn="留学资料" data-en="Study Abroad Materials" data-jp="留学資料">
+                </span>
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6"
+                    data-cn="日本与欧洲留学资源" data-en="Japan and Europe Study Abroad Resources" data-jp="日本とヨーロッパの留学リソース">
+                </h2>
+                <p class="text-gray-600 text-lg"
+                    data-cn="整理了日本和欧洲留学的常见问题与解答，帮助你了解申请流程、准备材料和生活指南"
+                    data-en="Collected common questions and answers about studying in Japan and Europe to help you understand application procedures, preparation materials and living guides"
+                    data-jp="日本とヨーロッパの留学に関する一般的な質問と回答を整理し、申請手続き、準備資料、生活ガイドを理解するのに役立てます">
+                </p>
+            </div>
+
+            <!-- 日本留学部分 -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="bg-softBlue/50 rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"
+                        data-cn="日本留学常见问题" data-en="Common Questions about Studying in Japan" data-jp="日本留学の一般的な質問">
+                        <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-map-marker"></i>
+                        </span>
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Q&A 1 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 日本计算机专业研究生申请需要哪些条件？" data-en="Q: What are the requirements for applying to computer science graduate programs in Japan?" data-jp="Q: 日本のコンピュータ科学の大学院に申請するにはどのような要件が必要ですか？">
+                                <i class="fa fa-question-circle text-primary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 主要条件包括：本科相关专业学历、日语能力（理科至少N2，部分院校需要N1）、英语成绩（托福/托业，部分院校接受雅思）、研究计划书、教授内诺（部分院校）、GPA（建议3.0/4.0以上）。部分英语授课项目可免除日语要求。"
+                                data-en="A: Main requirements include: undergraduate degree in related fields, Japanese proficiency (at least N2 for science, N1 for some institutions), English scores (TOEFL/TOEIC, some accept IELTS), research plan, professor's approval (for some institutions), GPA (3.0/4.0 or higher recommended). Some English-taught programs may waive Japanese requirements."
+                                data-jp="A: 主な要件は以下の通りです：関連分野の学士号、日本語能力（理系は少なくともN2、一部の機関ではN1が必要）、英語スコア（TOEFL/TOEIC、一部はIELTSを受け入れる）、研究計画書、教授の内諾（一部の機関）、GPA（3.0/4.0以上推奨）。一部の英語授業プログラムは日本語要件を免除する場合があります。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 2 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 研究计划书应该包含哪些内容？" data-en="Q: What should a research plan include?" data-jp="Q: 研究計画書にはどのような内容を含めるべきですか？">
+                                <i class="fa fa-question-circle text-primary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 通常包括：研究背景与意义、研究现状与不足、拟解决的关键问题、研究方法与步骤、预期成果与创新点、时间规划、参考文献等。建议结合目标教授的研究方向定制，长度一般为2000-3000字（日语或英语）。"
+                                data-en="A: Usually includes: research background and significance, current research status and limitations, key issues to be solved, research methods and steps, expected results and innovations, timeline, references, etc. It is recommended to customize according to the research direction of the target professor, with a length of 2000-3000 words (in Japanese or English). "
+                                data-jp="A: 通常、研究背景と意義、研究の現状と課題、解決しようとする鍵となる問題、研究方法と手順、予想される成果と革新点、時間計画、参考文献などが含まれます。目標の教授の研究方向に合わせてカスタマイズすることを推奨し、長さは通常2000-3000文字（日本語または英語）です。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 3 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 日本留学费用大概是多少？有哪些奖学金可以申请？" data-en="Q: What is the approximate cost of studying in Japan? What scholarships are available?" data-jp="Q: 日本での留学費用は大体どのくらいですか？申請できる奨学金はどのようなものがありますか？">
+                                <i class="fa fa-question-circle text-primary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 国公立大学学费约30-50万日元/年，私立大学约80-150万日元/年。生活费（东京地区）约10-15万日元/月。主要奖学金包括：日本政府（MEXT）奖学金、JASSO奖学金、各大学内部奖学金、民间团体奖学金（如丰田、三菱等）。"
+                                data-en="A: Tuition fees for national/public universities are about 300,000-500,000 yen/year, and private universities are about 800,000-1,500,000 yen/year. Living expenses (in Tokyo area) are about 100,000-150,000 yen/month. Major scholarships include: Japanese Government (MEXT) Scholarship, JASSO Scholarship, university internal scholarships, private organization scholarships (e.g., Toyota, Mitsubishi, etc.)."
+                                data-jp="A: 国公立大学の授業料は約30-50万円/年、私立大学は約80-150万円/年です。生活費（東京地区）は約10-15万円/月です。主な奨学金には、日本政府（MEXT）奨学金、JASSO奨学金、各大学の内部奨学金、民間団体の奨学金（トヨタ、三菱など）があります。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 4 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 日本大学的申请时间规划应该如何安排？" data-en="Q: How to plan the application timeline for Japanese universities?" data-jp="Q: 日本の大学の申請スケジュールはどのように計画すべきですか？">
+                                <i class="fa fa-question-circle text-primary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 建议提前1-2年准备：<br>
+									- 申请前18个月：开始学习日语，准备英语考试<br>
+									- 申请前12个月：确定目标院校和教授，开始联系教授（套磁），准备研究计划书<br>
+									- 申请前9个月：参加语言考试，获取合格成绩<br>
+									- 申请前6-8个月：提交申请材料，参加面试（部分院校）<br>
+									- 申请前3-4个月：获得内诺或录取通知<br>
+									- 申请前2个月：办理在留资格认定<br>
+									- 申请前1个月：申请签证，准备赴日"
+                                data-en="A: It is recommended to prepare 1-2 years in advance:<br>
+									- 18 months before application: Start learning Japanese and prepare for English exams<br>
+									- 12 months before application: Identify target institutions and professors, start contacting professors, prepare research plan<br>
+									- 9 months before application: Take language proficiency tests and obtain qualified scores<br>
+									- 6-8 months before application: Submit application materials and attend interviews (for some institutions)<br>
+									- 3-4 months before application: Obtain professor's approval or admission notice<br>
+									- 2 months before application: Apply for residence status certification<br>
+									- 1 month before application: Apply for visa and prepare for departure to Japan"
+                                data-jp="A: 1-2年前から準備することを推奨します：<br>
+									- 申請の18ヶ月前：日本語の学習を始め、英語の試験の準備をする<br>
+									- 申請の12ヶ月前：目標の大学と教授を確定し、教授に連絡を始め（コンタクト）、研究計画書を準備する<br>
+									- 申請の9ヶ月前：語学力試験を受け、合格点を取得する<br>
+									- 申請の6-8ヶ月前：申請資料を提出し、面接に参加する（一部の大学）<br>
+									- 申請の3-4ヶ月前：内諾または合格通知を受け取る<br>
+									- 申請の2ヶ月前：在留資格認定の手続きをする<br>
+									- 申請の1ヶ月前：ビザを申請し、日本への渡航準備をする">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 5 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 日本留学签证需要准备哪些材料？办理流程是怎样的？" data-en="Q: What materials are needed for a Japanese student visa? What is the application process?" data-jp="Q: 日本の留学ビザにはどのような資料が必要ですか？手続きの流れはどのようになっていますか？">
+                                <i class="fa fa-question-circle text-primary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 主要材料包括：在留资格认定证明书、护照、签证申请表、照片、入学许可书复印件、经费支付能力证明等。<br>
+									办理流程：<br>
+									1. 由日本院校向入国管理局申请在留资格认定<br>
+									2. 收到在留资格认定书后，向日本驻华使领馆申请签证<br>
+									3. 签证审核通过后（通常5-7个工作日），领取签证<br>
+									4. 持签证和在留资格认定书入境日本"
+                                data-en="A: Main materials include: Certificate of Eligibility, passport, visa application form, photo, copy of admission letter, proof of financial capability, etc.<br>
+									Application process:<br>
+									1. The Japanese institution applies for Certificate of Eligibility from the Immigration Bureau<br>
+									2. After receiving the Certificate of Eligibility, apply for a visa at the Japanese embassy/consulate in China<br>
+									3. Collect the visa after approval (usually 5-7 working days)<br>
+									4. Enter Japan with visa and Certificate of Eligibility"
+                                data-jp="A: 主な資料には、在留資格認定証明書、パスポート、ビザ申請書、写真、入学許可書のコピー、経費支払能力証明などが含まれます。<br>
+									手続きの流れ：<br>
+									1. 日本の大学が入国管理局に在留資格認定を申請する<br>
+									2. 在留資格認定証明書を受け取った後、日本大使館・領事館でビザを申請する<br>
+									3. ビザ審査が通過した後（通常5-7営業日）、ビザを受け取る<br>
+									4. ビザと在留資格認定証明書を持って日本に入国する">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 6 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 日本计算机专业毕业后就业前景如何？" data-en="Q: What are the employment prospects after graduating from a computer science program in Japan?" data-jp="Q: 日本のコンピュータ科学科を卒業した後の就職前景はどのようですか？">
+                                <i class="fa fa-question-circle text-primary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 就业前景良好，尤其是人工智能、大数据、软件工程等领域需求旺盛。主要就业方向包括：IT企业（如富士通、日立、软银）、制造业的IT部门、金融科技公司、游戏开发公司等。硕士毕业生平均起薪约20-25万日元/月。留学生毕业后可申请工作签证，在日工作满5年可申请永久居留。"
+                                data-en="A: Employment prospects are good, especially in fields such as artificial intelligence, big data, and software engineering. Main employment directions include: IT companies (e.g., Fujitsu, Hitachi, SoftBank), IT departments of manufacturing companies, fintech companies, game development companies, etc. The average starting salary for master's graduates is about 200,000-250,000 yen/month. International students can apply for a work visa after graduation, and can apply for permanent residency after working in Japan for 5 years."
+                                data-jp="A: 就職前景は良好で、特に人工知能、ビッグデータ、ソフトウェアエンジニアリングなどの分野で需要が高いです。主な就職先には、IT企業（富士通、日立、ソフトバンクなど）、製造業のIT部門、フィンテック企業、ゲーム開発会社などがあります。大学院卒業生の平均初任給は約20-25万円/月です。留学生は卒業後、就労ビザを申請でき、日本で5年間働いた後、永住権を申請することができます。">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 欧洲留学部分 -->
+                <div class="bg-softGreen/50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"
+                        data-cn="欧洲留学常见问题" data-en="Common Questions about Studying in Europe" data-jp="ヨーロッパ留学の一般的な質問">
+                        <span class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mr-3">
+                            <i class="fa fa-map-marker"></i>
+                        </span>
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Q&A 1 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 欧洲哪些国家的计算机专业比较强？" data-en="Q: Which European countries have strong computer science programs?" data-jp="Q: ヨーロッパではどの国のコンピュータ科学プログラムが強いですか？">
+                                <i class="fa fa-question-circle text-secondary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 德国（慕尼黑工业大学、亚琛工业大学）、英国（剑桥、帝国理工）、瑞士（ETH Zurich、EPFL）、荷兰（代尔夫特理工、埃因霍温理工）、瑞典（KTH皇家理工）、法国（巴黎综合理工、巴黎高师）等国的计算机专业享誉世界。"
+                                data-en="A: Countries with renowned computer science programs include Germany (Technical University of Munich, RWTH Aachen), UK (Cambridge, Imperial College London), Switzerland (ETH Zurich, EPFL), Netherlands (Delft University of Technology, Eindhoven University of Technology), Sweden (KTH Royal Institute of Technology), France (École Polytechnique, École Normale Supérieure) and others."
+                                data-jp="A: ドイツ（ミュンヘン工科大学、アーヘン工科大学）、イギリス（ケンブリッジ大学、インペリアル・カレッジ・ロンドン）、スイス（ETHチューリッヒ、EPFL）、オランダ（デルフト工科大学、アイントーフェン工科大学）、スウェーデン（KTH王立工科大学）、フランス（ポリテクニック学校、高等師範学校）などの国のコンピュータ科学プログラムは世界的に有名です。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 2 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 欧洲英语授课的计算机硕士项目多吗？申请需要准备什么？" data-en="Q: Are there many English-taught computer science master's programs in Europe? What do I need to prepare for application?" data-jp="Q: ヨーロッパには英語で授業されるコンピュータ科学の修士プログラムは多いですか？申請には何を準備する必要がありますか？">
+                                <i class="fa fa-question-circle text-secondary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 非常多，尤其是北欧、荷兰、德国、英国等国家。申请材料通常包括：本科成绩单、动机信（SOP）、推荐信（2-3封）、CV、英语成绩（雅思6.5+/托福90+）、GRE（部分顶尖院校要求）、作品集/项目经历（部分院校）。"
+                                data-en="A: Yes, quite a lot, especially in Northern Europe, Netherlands, Germany, UK, etc. Application materials usually include: undergraduate transcripts, statement of purpose (SOP), recommendation letters (2-3), CV, English proficiency (IELTS 6.5+/TOEFL 90+), GRE (required by some top institutions), portfolio/project experience (some institutions). "
+                                data-jp="A: 非常に多く、特に北欧、オランダ、ドイツ、イギリスなどの国では多く見られます。申請資料には通常、学部の成績証明書、動機付け書（SOP）、推薦状（2-3通）、CV、英語能力証明（IELTS 6.5+/TOEFL 90+）、GRE（一部のトップ機関で必要）、ポートフォリオ/プロジェクト経験（一部の機関）が含まれます。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 3 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 欧洲留学的费用和奖学金情况如何？" data-en="Q: What is the cost and scholarship situation for studying in Europe?" data-jp="Q: ヨーロッパでの留学費用と奨学金の状況はどうですか？">
+                                <i class="fa fa-question-circle text-secondary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 费用差异较大：德国公立大学免学费，仅收注册费；英国一年制硕士学费约15-30万人民币；荷兰学费约8-15万人民币/年。奖学金包括：欧盟Erasmus+项目、各大学全奖/半奖、国家留学基金委（CSC）奖学金、企业赞助奖学金等。"
+                                data-en="A: Costs vary greatly: public universities in Germany are tuition-free, only收取 registration fees; one-year master's programs in the UK cost about 150,000-300,000 RMB; tuition in the Netherlands is about 80,000-150,000 RMB/year. Scholarships include: EU Erasmus+ program, full/partial scholarships from universities, China Scholarship Council (CSC) scholarships, corporate-sponsored scholarships, etc."
+                                data-jp="A: 費用は大きく異なります：ドイツの公立大学は授業料が無料で、登録料のみが必要です；イギリスの1年制修士課程の授業料は約15-30万元人民元；オランダの授業料は約8-15万元人民元/年です。奨学金には、EUのErasmus+プログラム、各大学の全額/半額奨学金、国家留学基金委員会（CSC）の奨学金、企業支援の奨学金などがあります。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 4 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 欧洲各国的留学签证有什么不同？" data-en="Q: What are the differences between student visas in European countries?" data-jp="Q: ヨーロッパ各国の留学ビザにはどのような違いがありますか？">
+                                <i class="fa fa-question-circle text-secondary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 欧洲留学签证主要分为：<br>
+									- 申根签证：适用于短期留学（90天以内），可在申根区26国自由通行<br>
+									- 国别签证：适用于长期留学（超过90天），由目标国家单独签发<br>
+									- 英国签证：英国不属于申根区，需单独申请Tier 4学生签证<br>
+									- 爱尔兰签证：需单独申请，与英国有短期互免政策<br>
+									签证材料通常包括：录取通知书、资金证明、语言成绩、保险证明、健康证明等，具体要求因国家而异。"
+                                data-en="A: European student visas are mainly divided into:<br>
+									- Schengen visa: For short-term study (within 90 days), allowing free movement in 26 Schengen countries<br>
+									- National visa: For long-term study (more than 90 days), issued separately by the target country<br>
+									- UK visa: The UK is not part of the Schengen area, requiring a separate Tier 4 student visa<br>
+									- Ireland visa: Requires separate application, with short-term mutual exemption policy with the UK<br>
+									Visa materials usually include: admission letter, proof of funds, language scores, insurance certificate, health certificate, etc., with specific requirements varying by country."
+                                data-jp="A: ヨーロッパの留学ビザは主に以下のように分類されます：<br>
+									- シェンゲンビザ：短期留学（90日以内）に適用され、シェンゲン圏26か国を自由に往来できます<br>
+									- 国別ビザ：長期留学（90日を超える）に適用され、対象国が個別に発行します<br>
+									- 英国ビザ：英国はシェンゲン圏に属していないため、別途Tier 4学生ビザを申請する必要があります<br>
+									- アイルランドビザ：別途申請する必要があり、英国と短期相互免除政策があります<br>
+									ビザ資料には通常、入学許可書、資金証明、語学力証明、保険証明、健康証明などが含まれ、具体的な要件は国によって異なります。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 5 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 欧洲留学期间可以打工吗？毕业后就业政策如何？" data-en="Q: Can I work while studying in Europe? What are the post-graduation employment policies?" data-jp="Q: ヨーロッパで留学中に働くことができますか？卒業後の就職政策はどのようになっていますか？">
+                                <i class="fa fa-question-circle text-secondary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 打工政策：<br>
+									- 欧盟国家普遍允许学生每周工作20小时，假期可全职工作<br>
+									- 英国允许学生每周工作20小时，硕士期间假期无限制<br>
+									就业政策：<br>
+									- 德国：毕业后可申请18个月找工作签证<br>
+									- 英国：毕业后可申请2年PSW签证（本科及以上）<br>
+									- 荷兰：毕业后可申请1年找工作签证<br>
+									- 法国：硕士毕业可申请2年居留许可<br>
+									- 北欧国家：通常给予6-12个月找工作时间<br>
+									欧洲IT行业人才需求旺盛，计算机专业毕业生就业率普遍较高。"
+                                data-en="A: Work policies:<br>
+									- EU countries generally allow students to work 20 hours per week, and full-time during vacations<br>
+									- UK allows students to work 20 hours per week, with no restrictions during master's vacation periods<br>
+									Employment policies:<br>
+									- Germany: 18-month job-seeking visa available after graduation<br>
+									- UK: 2-year PSW visa available after graduation (for undergraduate and above)<br>
+									- Netherlands: 1-year job-seeking visa available after graduation<br>
+									- France: 2-year residence permit available for master's graduates<br>
+									- Nordic countries: Usually 6-12 months job-seeking period<br>
+									Europe has strong demand for IT talents, and employment rates for computer science graduates are generally high."
+                                data-jp="A: アルバイト政策：<br>
+									- EU諸国では一般的に、学生は週20時間働くことができ、休暇中はフルタイムで働くことができます<br>
+									- 英国では学生は週20時間働くことができ、修士期間中の休暇に制限はありません<br>
+									就職政策：<br>
+									- ドイツ：卒業後、18か月間の就職活動ビザを申請できます<br>
+									- 英国：卒業後、2年間のPSWビザを申請できます（学士号以上）<br>
+									- オランダ：卒業後、1年間の就職活動ビザを申請できます<br>
+									- フランス：修士課程卒業者は2年間の在留許可を申請できます<br>
+									- 北欧諸国：通常6-12か月の就職活動期間が与えられます<br>
+									ヨーロッパのIT業界では人材需要が高く、コンピュータ科学科の卒業生の就職率は一般的に高いです。">
+                            </p>
+                        </div>
+
+                        <!-- Q&A 6 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <h4 class="font-bold text-lg mb-2 flex items-start"
+                                data-cn="Q: 申请欧洲大学时，如何选择适合自己的院校和项目？" data-en="Q: How to choose suitable institutions and programs when applying to European universities?" data-jp="Q: ヨーロッパの大学に申請する際、どのように自分に合った大学とプログラムを選択すべきですか？">
+                                <i class="fa fa-question-circle text-secondary mt-1 mr-2"></i>
+                            </h4>
+                            <p class="text-gray-600 ml-6"
+                                data-cn="A: 建议从以下几个方面考虑：<br>
+									1. 专业匹配度：研究方向是否与自己的兴趣和背景相符<br>
+									2. 学术实力：参考QS、THE等排名，关注计算机学科专项排名<br>
+									3. 地理位置：考虑产业集群（如德国慕尼黑的汽车IT、荷兰阿姆斯特丹的互联网产业）<br>
+									4. 学费与生活成本：北欧和瑞士生活成本较高，德国、法国相对亲民<br>
+									5. 语言要求：英语项目或当地语言项目的选择<br>
+									6. 就业支持：学校的就业指导服务和企业合作情况<br>
+									7. 校友网络：了解毕业生的就业去向和职业发展<br>
+									建议制作对比表格，综合评估后做出选择。"
+                                data-en="A: It is recommended to consider the following aspects:<br>
+									1. Program matching: Whether the research direction matches your interests and background<br>
+									2. Academic strength: Refer to QS, THE and other rankings, focusing on computer science subject rankings<br>
+									3. Geographic location: Consider industry clusters (e.g., automotive IT in Munich, Germany; internet industry in Amsterdam, Netherlands)<br>
+									4. Tuition and living costs: Higher in Nordic countries and Switzerland, more affordable in Germany and France<br>
+									5. Language requirements: Choice between English programs or local language programs<br>
+									6. Employment support: School's career guidance services and corporate partnerships<br>
+									7. Alumni network: Understand graduates' employment destinations and career development<br>
+									It is recommended to create a comparison table and make a choice after comprehensive evaluation."
+                                data-jp="A: 以下の観点から考慮することを推奨します：<br>
+									1. 専門の一致度：研究方向が自分の興味や背景と一致しているかどうか<br>
+									2. 学術力：QS、THEなどのランキングを参考にし、コンピュータ学科の専門ランキングに注目する<br>
+									3. 地理位置：産業集積を考慮する（例：ドイツのミュンヘンの自動車IT、オランダのアムステルダムのインターネット産業）<br>
+									4. 授業料と生活費：北欧やスイスの生活費は比較的高く、ドイツ、フランスは比較的手頃です<br>
+									5. 言語要件：英語プログラムまたは現地語プログラムの選択<br>
+									6. 就職支援：学校の就職指導サービスと企業提携状況<br>
+									7. 校友会ネットワーク：卒業生の就職先とキャリア発展を了解する<br>
+									比較表を作成し、総合的に評価した上で選択することを推奨します。">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center max-w-2xl mx-auto">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 transition-all"
+                    data-cn="下载完整留学指南 <i class='fa fa-download ml-2'></i>"
+                    data-en="Download Complete Guide <i class='fa fa-download ml-2'></i>"
+                    data-jp="完全な留学ガイドをダウンロード <i class='fa fa-download ml-2'></i>">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://huyang3780.top" class="text-2xl font-bold flex items-center">
+                        <span class="mr-2 text-primary"><i class="fa fa-connectdevelop"></i></span>
+                        <span>Jeffery Hu</span>
+                    </a>
+                    <p class="text-gray-400 mt-2"
+                        data-cn="我的数字家园，连接你我"
+                        data-en="My digital home, connecting you and me"
+                        data-jp="私のデジタルホーム、あなたと私をつなぐ">
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                    <a href="main-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="计算机资源" data-en="Computer Resources" data-jp="コンピュータリソース"></a>
+                    <a href="study-resource.html" class="text-gray-400 hover:text-white transition-colors" data-cn="语言资源" data-en="Language Resources" data-jp="言語リソース"></a>
+                    <a href="study-online.html" class="text-gray-400 hover:text-white transition-colors" data-cn="在线学习" data-en="Online Learning" data-jp="オンライン学習"></a>
+                    <a href="studyaboard.html" class="text-gray-400 hover:text-white transition-colors" data-cn="留学资料" data-en="Study Abroad" data-jp="留学資料"></a>
+                    <a href="program-tools.html" class="text-gray-400 hover:text-white transition-colors" data-cn="开发工具" data-en="Dev Tools" data-jp="開発ツール"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm"
+                    data-cn="© 2025 Jeffery Hu  |  保留所有权利。"
+                    data-en="© 2025 Jeffery Hu  |  All rights reserved."
+                    data-jp="© 2025 Jeffery Hu  |  全著作権所有。">
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <select id="footer-language-selector" class="bg-gray-800 border border-gray-700 text-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option value="cn" selected>中文</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js.js"></script>
+</body>
+</html>
